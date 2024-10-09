@@ -14,6 +14,7 @@ const Footer: FC = () => {
       bg="#0E1218"
       alignItems="center"
       justifyContent="space-between"
+      flexDirection={['column', 'column', 'column', 'row']}
     >
       <Div display="flex" justifyContent="center" alignItems="center">
         {SOCIAL.map(({ title, Icon, link }) => {
@@ -40,6 +41,7 @@ const Footer: FC = () => {
       </Div>
       <Div>
         <P
+          p="0.5rem"
           color="#FFF"
           fontWeight={500}
           lineHeight="1.rem"
