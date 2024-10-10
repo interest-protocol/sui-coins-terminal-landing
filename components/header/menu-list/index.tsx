@@ -1,27 +1,28 @@
-import { Div, Li, Nav } from '@stylin.js/elements';
+import { Li } from '@stylin.js/elements';
 import Link from 'next/link';
+import { FC } from 'react';
 
 import { NAV_ITEMS } from './menu-list.data';
 
-const MenuList = () => {
+const MenuList: FC = () => {
   return (
-    <Nav gridRowStart="1" gridColumnStart="1" justifySelf="center">
-      <Div gap="1rem" display="flex" alignItems="center">
-        {NAV_ITEMS.map(({ name, url }, index) => (
-          <Link href={url} key={index} style={{ textDecoration: 'none' }}>
-            <Li
-              display="flex"
-              listStyle="none"
-              fontSize="1.25rem"
-              nHover={{ opacity: '.8' }}
-              transition="all 300ms ease-in-out"
-            >
-              {name}
-            </Li>
+    <>
+      {NAV_ITEMS.map(({ name, url }, index) => (
+        <Li
+          key={index}
+          color="#fff"
+          display="flex"
+          listStyle="none"
+          fontSize="1rem"
+          nHover={{ opacity: '.8' }}
+          transition="all 300ms ease-in-out"
+        >
+          <Link href={url} style={{ textDecoration: 'none' }}>
+            {name}
           </Link>
-        ))}
-      </Div>
-    </Nav>
+        </Li>
+      ))}
+    </>
   );
 };
 

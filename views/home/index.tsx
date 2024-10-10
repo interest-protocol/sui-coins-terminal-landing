@@ -1,12 +1,7 @@
 import { FC } from 'react';
 
 import { Layout } from '@/components';
-import Header from '@/components/header';
 
-const Home: FC = () => (
-  <Layout>
-    <Header />
-  </Layout>
-);
+const Home: FC = () => <Layout></Layout>;
 
 export default Home;
