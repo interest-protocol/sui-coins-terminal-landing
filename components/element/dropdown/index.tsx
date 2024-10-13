@@ -18,36 +18,27 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
     setIsDropdownOpen(false);
   };
   return (
-    <Div position="relative" width="100%">
+    <Div position="relative" width="100%" mt="0.6rem">
       <Button
-        p="0.5rem"
+        p="1rem"
         mr="0.5rem "
-        height="2rem"
+        width="100%"
+        height="3rem"
         display="flex"
-        color="#353A3E"
         fontSize="1rem"
+        cursor="pointer"
+        color="#353A3E"
         alignItems="center"
-        background="#FFFFFF"
-        borderRadius="0.25rem"
+        borderRadius="0.5rem"
+        background="#EDEDF1"
         textTransform="capitalize"
         border="1px solid #E0E0D7"
         justifyContent="space-between"
-        cursor="pointer"
-        width="100%"
         textAlign={['left', 'left', 'left', 'right']}
-        boxShadow="inset 1px 1px 0 0 rgba(255, 255, 255, 0.80"
-        backgroundImage="linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 100%)"
         onClick={toggleDropdown}
       >
         {defaultValue}
-        <Div
-          height="2rem"
-          display="flex"
-          width="2rem"
-          alignItems="center"
-          justifyContent="center"
-          borderLeft="1px solid #E0E0D7"
-        >
+        <Div width="1.5rem" height="1.5rem">
           <ArrowDownSVG maxHeight="100%" maxWidth="100%" width="100%" />
         </Div>
       </Button>

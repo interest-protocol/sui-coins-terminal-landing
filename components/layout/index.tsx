@@ -11,6 +11,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       display="flex"
       bg="#171F28"
       minWidth="100%"
+      height="37.5rem"
       minHeight="37.5rem"
       borderRadius="0.5rem"
       alignItems="flex-start"

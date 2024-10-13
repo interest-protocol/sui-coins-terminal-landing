@@ -14,18 +14,27 @@ dependencies:
   '@types/uuid':
     specifier: ^10.0.0
     version: 10.0.0
+  framer-motion:
+    specifier: ^11.11.8
+    version: 11.11.8(react-dom@18.3.1)(react@18.3.1)
   next:
     specifier: 14.0.3
     version: 14.0.3(react-dom@18.3.1)(react@18.3.1)
   prettier:
     specifier: ^3.1.0
     version: 3.3.3
+  ramda:
+    specifier: ^0.30.1
+    version: 0.30.1
   react:
     specifier: ^18.2.0
     version: 18.3.1
   react-dom:
     specifier: ^18.2.0
     version: 18.3.1(react@18.3.1)
+  react-hook-form:
+    specifier: ^7.53.0
+    version: 7.53.0(react@18.3.1)
   uuid:
     specifier: ^10.0.0
     version: 10.0.0
@@ -728,8 +737,8 @@ packages:
     resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
     dev: true
 
-  /@stylin.js/core@1.0.1(@emotion/react@11.13.3):
-    resolution: {integrity: sha512-863ADeuvAbzLFrish0gJX2qEwDyx6NV4Raf2/EHerd5/2FYX4LUxX4AAKaM2UIVmlsi5gbsdimf0ad3oxhCcCQ==}
+  /@stylin.js/core@1.0.2(@emotion/react@11.13.3):
+    resolution: {integrity: sha512-amMXRgu700eyCWawbVpGjLKABLJkAaK8VX5K3xmzJdiNmbhDaQ1SUrKFXl3Jzgp9Y1rrdzkvs1jnT122D0waVQ==}
     peerDependencies:
       '@emotion/react': ^11.x.x
     dependencies:
@@ -739,19 +748,19 @@ packages:
   /@stylin.js/elements@1.0.3(@types/react@18.3.11)(react@18.3.1):
     resolution: {integrity: sha512-QNf0yBFoQS7xZh+esoNoslhhWcJ0+uSiijx+Q9+eV8H4IdEq5bwofYsg6n1YdaRvhfQMGowDS2PwRL1+Ic4ceg==}
     dependencies:
-      '@stylin.js/react': 1.0.8-alpha.2(@types/react@18.3.11)(react@18.3.1)
+      '@stylin.js/react': 1.1.1(@types/react@18.3.11)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - supports-color
     dev: false
 
-  /@stylin.js/react@1.0.8-alpha.2(@types/react@18.3.11)(react@18.3.1):
-    resolution: {integrity: sha512-nAGMWOeusmlUdKPM3kC532uKuKcaDLhRJl0v9k0znCb+HEr4U8mUqEO+SB5mR7VkX00BoYOJ8gt6T3wM/6Yn0A==}
+  /@stylin.js/react@1.1.1(@types/react@18.3.11)(react@18.3.1):
+    resolution: {integrity: sha512-Kh2mcMQiM43dluhlqFDeLmvmLqPRSSJUf6k8jKXFcca90ZY2wvOSp2mFFiXnf20pCqQR+60MD4NwZJEIY+KZ1Q==}
     dependencies:
       '@emotion/react': 11.13.3(@types/react@18.3.11)(react@18.3.1)
       '@emotion/styled': 11.13.0(@emotion/react@11.13.3)(@types/react@18.3.11)(react@18.3.1)
-      '@stylin.js/core': 1.0.1(@emotion/react@11.13.3)
+      '@stylin.js/core': 1.0.2(@emotion/react@11.13.3)
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -2294,6 +2303,25 @@ packages:
       is-callable: 1.2.7
     dev: true
 
+  /framer-motion@11.11.8(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-mnGQNEoz99GtFXBBPw+Ag5K4FcfP5XrXxrxHz+iE4Lmg7W3sf2gKmGuvfkZCW/yIfcdv5vJd6KiSPETH1Pw68Q==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tslib: 2.7.0
+    dev: false
+
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
@@ -3488,6 +3516,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /ramda@0.30.1:
+    resolution: {integrity: sha512-tEF5I22zJnuclswcZMc8bDIrwRHRzf+NqVEmqg50ShAZMP7MWeR/RGDthfM/p+BlqvF2fXAzpn8i+SJcYD3alw==}
+    dev: false
+
   /react-dom@18.3.1(react@18.3.1):
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
@@ -3496,6 +3528,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+    dev: false
+
+  /react-hook-form@7.53.0(react@18.3.1):
+    resolution: {integrity: sha512-M1n3HhqCww6S2hxLxciEXy2oISPnAzxY7gvwVPrtlczTM/1dDadXgUxDpHMrMTblDOcm/AXtXxHwZ3jpg1mqKQ==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+    dependencies:
+      react: 18.3.1
     dev: false
 
   /react-is@16.13.1:
