@@ -7,6 +7,7 @@ import { SOCIAL } from '@/constants/social';
 const Footer: FC = () => {
   return (
     <Div
+      mt="1rem"
       py="1rem"
       px="2rem"
       width="100%"
