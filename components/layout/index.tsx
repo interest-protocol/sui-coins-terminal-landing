@@ -2,6 +2,7 @@ import { Div, Main } from '@stylin.js/elements';
 import { FC, PropsWithChildren } from 'react';
 
 import Aside from './aside';
+import Footer from './footer';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main p="1rem">
@@ -21,6 +22,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       <Aside />
     </Div>
     {children}
+    <Footer />
   </Main>
 );
 
