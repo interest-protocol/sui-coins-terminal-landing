@@ -1,4 +1,4 @@
-import { Li } from '@stylin.js/elements';
+import { Li, Ul } from '@stylin.js/elements';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -6,7 +6,7 @@ import { NAV_ITEMS } from './menu-list.data';
 
 const MenuList: FC = () => {
   return (
-    <>
+    <Ul>
       {NAV_ITEMS.map(({ name, url }, index) => (
         <Li
           key={index}
@@ -22,7 +22,7 @@ const MenuList: FC = () => {
           </Link>
         </Li>
       ))}
-    </>
+    </Ul>
   );
 };
 
