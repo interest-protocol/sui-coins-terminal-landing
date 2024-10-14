@@ -1,6 +1,34 @@
 import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
+  @font-face {
+    font-family: 'Satoshi';
+    src:
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.woff2')
+        format('woff2'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.woff')
+        format('woff'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.ttf')
+        format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Satoshi';
+    src:
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.woff2')
+        format('woff2'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.woff')
+        format('woff'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.ttf')
+        format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -50,7 +78,7 @@ export const GlobalStyles = css`
   .switch {
     position: relative;
     display: inline-block;
-    width: 3.4rem;
+    width: 3rem;
     height: 1.5rem;
   }
 
@@ -75,10 +103,10 @@ export const GlobalStyles = css`
   .slider:before {
     position: absolute;
     content: '';
-    height: 1.25rem;
-    width: 1.25rem;
-    left: 4px;
-    bottom: 2px;
+    height: 1.1rem;
+    width: 1.1rem;
+    top: 0.2rem;
+    left: 0.2rem;
     background-color: white;
     -webkit-transition: 0.4s;
     transition: 0.4s;

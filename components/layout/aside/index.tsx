@@ -32,7 +32,7 @@ const Aside = () => {
       display="flex"
       height="100%"
       bg="#0E1218"
-      minWidth="25%"
+      minWidth="16.5rem"
       color="#FFF"
       overflowY="auto"
       maxHeight="100%"
@@ -40,7 +40,7 @@ const Aside = () => {
       flexDirection="column"
       alignItems="flex-start"
       justifyContent="flex-start"
-      width={['100%', '100%', '100%', '25%']}
+      width={['100%', '100%', '100%', '16.5rem']}
     >
       <H1
         fontWeight={700}
