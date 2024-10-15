@@ -31,7 +31,6 @@ const HeaderBar = () => {
       position={openMenu ? 'fixed' : 'unset'}
     >
       <Div
-        px="2rem"
         py="1rem"
         width="100%"
         alignItems="center"

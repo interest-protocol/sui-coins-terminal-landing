@@ -5,7 +5,7 @@ import Header from '../header';
 import Footer from './footer';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
-  <Main>
+  <Main px="2rem">
     <Header />
     {children}
     <Footer />
