@@ -54,10 +54,7 @@ const HeaderBar = () => {
           </Div>
         </Div>
         <Nav gridRowStart="1" gridColumnStart="1" justifySelf="center">
-          <Div
-            display={['none', 'none', 'none', 'flex', 'flex']}
-            gap={['1rem', '1rem', '1rem', '1.7rem', '3.5rem']}
-          >
+          <Div display={['none', 'none', 'none', 'flex', 'flex']}>
             <MenuList />
           </Div>
         </Nav>
