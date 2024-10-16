@@ -6,7 +6,7 @@ import { NAV_ITEMS } from './menu-list.data';
 
 const MenuList: FC = () => {
   return (
-    <Ul display="inherit" flexDirection="inherit" gap="1rem">
+    <Ul display="inherit" flexDirection="inherit" gap="2rem">
       {NAV_ITEMS.map(({ name, url }, index) => (
         <Li
           key={index}
