@@ -1,18 +1,16 @@
-import { Div, P } from '@stylin.js/elements';
+import { Div, Footer, P } from '@stylin.js/elements';
 import Link from 'next/link';
 import { FC } from 'react';
 
 import { SOCIAL } from '@/constants/social';
 
-const Footer: FC = () => {
+const FooterBar: FC = () => {
   return (
-    <Div
-      mt="1rem"
-      py="1rem"
-      px="2rem"
+    <Footer
+      pt="2rem"
       width="100%"
-      display="flex"
       bg="#0E1218"
+      display="flex"
       alignItems="center"
       justifyContent="space-between"
       flexDirection={['column', 'column', 'column', 'row']}
@@ -22,15 +20,14 @@ const Footer: FC = () => {
           return (
             <Link href={link} target="blank" key={title} title={title}>
               <Div
-                p="0.5rem"
-                m="0.5rem"
+                mr="0.5rem"
                 bg="#171F28"
                 color="#FFF"
-                cursor="pointer"
-                height="2.5rem"
                 width="2.5rem"
-                borderRadius="50%"
                 display="flex"
+                height="2.5rem"
+                cursor="pointer"
+                borderRadius="50%"
                 alignItems="center"
                 justifyContent="center"
               >
@@ -46,13 +43,13 @@ const Footer: FC = () => {
           color="#FFF"
           fontWeight={500}
           lineHeight="1.rem"
-          fontSize={['0.5rem', ['0.5rem', '0.5rem', '0.875rem']]}
+          fontSize={['0.7rem', '0.875rem']}
           fontFamily="Satoshi"
         >
           &copy; {new Date().getFullYear()} — Copyright All Rights reserved
         </P>
       </Div>
-    </Div>
+    </Footer>
   );
 };
-export default Footer;
+export default FooterBar;

@@ -44,6 +44,7 @@ export const GlobalStyles = css`
   body,
   html {
     overflow-x: hidden;
+    background-color: #0e1218;
   }
 
   a {
