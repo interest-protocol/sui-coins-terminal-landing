@@ -23,18 +23,16 @@ const HeaderBar = () => {
   return (
     <Header
       bg="#0E1218"
-      display="flex"
+      pb="2rem"
+      width="90vw"
+      display="inline-flex"
       flexDirection="column"
       zIndex={openMenu ? 9 : 'inherit'}
-      width={openMenu ? '100vw' : 'auto'}
       minHeight={openMenu ? '100vh' : 'auto'}
       position={openMenu ? 'fixed' : 'unset'}
     >
       <Div
-        py="1rem"
-        width="100%"
-        alignItems="center"
-        borderBottom={openMenu ? '1px solid #fff' : 'unset'}
+        pb="1rem"
         justifyContent={[
           'space-between',
           'space-between',
@@ -42,11 +40,12 @@ const HeaderBar = () => {
           'unset',
           'unset',
         ]}
-        display={['flex', 'flex', 'flex', 'grid', 'grid']}
+        borderBottom={openMenu ? '1px solid #fff' : '1px solid #0e1218'}
+        display={['inline-flex', 'inline-flex', 'inline-flex', 'grid', 'grid']}
       >
         <Div gridRowStart="1" justifySelf="left" gridColumnStart="1">
           <Div color="#fff" display="flex" flex="0 0 auto" alignItems="center">
-            <Div maxHeight="3rem" maxWidth="3rem" mr="1rem">
+            <Div maxHeight="1.5rem" maxWidth="1.5rem" mr="1rem">
               <SuiCoinsLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
             </Div>
             <H1 fontSize="1rem">Sui Coins</H1>
@@ -73,7 +72,6 @@ const HeaderBar = () => {
       </Div>
       {openMenu && (
         <Div
-          px="2rem"
           pt="1rem"
           gap="1rem"
           flexDirection="column"
