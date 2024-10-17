@@ -23,9 +23,9 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
         p="1rem"
         mr="0.5rem "
         width="100%"
-        height="3rem"
         display="flex"
         fontSize="1rem"
+        height="2.75rem"
         cursor="pointer"
         color="#353A3E"
         alignItems="center"
@@ -46,28 +46,29 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
         <Div
           my="0.5rem"
           zIndex={999}
-          bg="#FFFFFF"
           width="100%"
-          maxHeight="32rem"
+          display="flex"
           overflowY="auto"
+          maxHeight="32rem"
+          alignItems="flex-start"
           position="absolute"
-          borderRadius="0.25rem"
-          border="1px solid #E0E0D7"
+          borderRadius="0.5rem"
+          background="#EDEDF1"
+          flexDirection="column"
+          justifyContent="flex-start"
+          border="1px solid #A8A8A8"
         >
           {menuItems.map((value: string | number) => (
             <Div
-              p="0.5rem"
+              p="1rem"
               key={v4()}
-              height="2rem"
-              display="flex"
-              color="#353A3E"
+              width="100%"
               fontSize="1rem"
-              alignItems="flex-start"
+              color="#353A3E"
+              background="#EDEDF1"
               textTransform="capitalize"
-              borderBottom="1px solid #E0E0D7"
-              justifyContent="flex-start"
               nHover={{
-                backgroundColor: '#d6d6cc',
+                backgroundColor: '#EBEDFF',
                 transition: 'all 0.5s ease-in-out',
               }}
               onClick={() => handleMenuItemClick(value as string)}
