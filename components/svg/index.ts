@@ -1,3 +1,4 @@
+export { default as ArrowDownSVG } from './arrow-down';
 export { default as DiscordSVG } from './discord';
 export { default as GithubSVG } from './github';
 export { default as LogoSVG } from './logo';

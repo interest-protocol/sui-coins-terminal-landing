@@ -1,6 +1,17 @@
 import { Div, H1, P } from '@stylin.js/elements';
+import { useState } from 'react';
+
+import { Tabs } from '../tabs';
+import Filters from './filters';
+import { TABS_DATA } from './hero.data';
 
 const Hero = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const handleOnChangeTab = (index: number) => {
+    setTabIndex(index);
+  };
+
   return (
     <Div display="flex" alignItems="center" flexDirection="column">
       <Div
@@ -46,18 +57,28 @@ const Hero = () => {
         height="47.5rem"
         borderRadius="1rem"
       >
+        <Filters />
         <Div
-          bg="black"
+          p="1.5rem"
+          bg="#0E1218"
           height="100%"
-          width="16.5rem"
-          borderRadius="inherit"
-        ></Div>
-        <Div
-          bg="black"
-          height="100%"
+          display="flex"
           width="fill-available"
           borderRadius="inherit"
-        ></Div>
+          justifyContent="center"
+        >
+          <Div width="21.813rem">
+            <Tabs items={TABS_DATA} onChangeTab={handleOnChangeTab} />
+            <P
+              color="#B6B8BB"
+              textAlign="center"
+              fontSize="0.75rem"
+              lineHeight="1.125rem"
+            >
+              {TABS_DATA[tabIndex].description}
+            </P>
+          </Div>
+        </Div>
       </Div>
     </Div>
   );
