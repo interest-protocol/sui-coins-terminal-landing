@@ -8,6 +8,7 @@ import { TabsProps } from './tabs.types';
 export const Tabs: FC<TabsProps> = ({
   items,
   px,
+  width,
   onChangeTab,
   defaultTabIndex = 0,
 }) => {
@@ -26,11 +27,9 @@ export const Tabs: FC<TabsProps> = ({
       height="3rem"
       role="tablist"
       display="flex"
-      flexDirection="row"
       position="relative"
-      minWidth="max-content"
-      width="fill-available"
       borderRadius="0.625rem"
+      minWidth={width ?? 'fill-available'}
     >
       {items.map((item, index) => (
         <TabItem

@@ -12,7 +12,7 @@ export interface customWidthProps {
 
 export interface ITabItem {
   label: string;
-  description: string;
+  description?: string;
 }
 
 export interface TabItemProps extends customMarginXProps {
@@ -27,6 +27,7 @@ export interface TabItemPropsItemTextProps extends customMarginXProps {
 
 export interface TabsProps extends customMarginXProps, customWidthProps {
   defaultTabIndex?: number;
+  width?: string | ReadonlyArray<string>;
   items: ReadonlyArray<ITabItem>;
   onChangeTab?: (tabIndex: number) => void;
 }

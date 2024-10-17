@@ -7,6 +7,7 @@ import { TabItemProps } from './tabs.types';
 const TabItem: FC<TabItemProps> = ({ px, item, onChange, isSelected }) => {
   return (
     <Div
+      flex="1"
       p="0.2rem"
       role="tab"
       display="flex"

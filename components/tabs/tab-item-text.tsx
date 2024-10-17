@@ -6,22 +6,23 @@ import { TabItemPropsItemTextProps } from './tabs.types';
 const NavItemText: FC<PropsWithChildren<TabItemPropsItemTextProps>> = ({
   isSelected,
   children,
-  px,
 }) => {
   return (
     <Div
+      px="0.5rem"
+      width="100%"
       py="0.635rem"
       role="tabpanel"
       fontFamily="Proto"
+      textAlign="center"
       position="relative"
-      px={px ?? ['2rem', '2rem', '1.5rem']}
     >
       <Span
         zIndex={2}
-        fontSize="1rem"
-        position="relative"
         fontWeight="600"
+        position="relative"
         color={isSelected ? '#000' : '#fff'}
+        fontSize={['0.7rem', '0.7rem', '0.7rem', '0.9rem', '0.9rem']}
       >
         {children}
       </Span>

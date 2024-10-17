@@ -4,12 +4,24 @@ import { useState } from 'react';
 import { Tabs } from '../tabs';
 import Filters from './filters';
 import { TABS_DATA } from './hero.data';
+import HeroModal from './modal';
+import HeroWidget from './widget';
 
 const Hero = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleOnChangeTab = (index: number) => {
     setTabIndex(index);
+  };
+
+  const renderTabContent = () => {
+    if (tabIndex === 2) {
+      return <HeroWidget />;
+    }
+    if (tabIndex === 0) {
+      return <HeroModal />;
+    }
+    return null;
   };
 
   return (
@@ -51,32 +63,61 @@ const Hero = () => {
         p="1.5rem"
         gap="1rem"
         mt="-13rem"
-        width="76rem"
         bg="#171f28"
         display="flex"
-        height="47.5rem"
+        height={['auto', 'auto', 'auto', '47.5rem', '47.5rem']}
         borderRadius="1rem"
+        width={['100%', '100%', '100%', '62rem', '76rem']}
+        flexDirection={[
+          'column-reverse',
+          'column-reverse',
+          'column-reverse',
+          'row',
+          'row',
+        ]}
       >
         <Filters />
         <Div
-          p="1.5rem"
+          py={['1.5rem', '1.5rem', '1.5rem', '1.5rem', '1.5rem']}
+          px={['0rem', '0rem', '0rem', '1.5rem', '1.5rem']}
           bg="#0E1218"
           height="100%"
           display="flex"
           width="fill-available"
           borderRadius="inherit"
-          justifyContent="center"
+          flexDirection="column"
+          alignItems="center"
         >
-          <Div width="21.813rem">
+          <Div
+            px="1rem"
+            mb="1rem"
+            width={[
+              'fill-available',
+              'fill-available',
+              '20rem',
+              '21.813rem',
+              '21.813rem',
+            ]}
+          >
             <Tabs items={TABS_DATA} onChangeTab={handleOnChangeTab} />
             <P
               color="#B6B8BB"
+              height="2.25rem"
               textAlign="center"
               fontSize="0.75rem"
               lineHeight="1.125rem"
             >
               {TABS_DATA[tabIndex].description}
             </P>
+          </Div>
+          <Div
+            display="flex"
+            alignItems="center"
+            width="fill-available"
+            height="fill-available"
+            justifyContent="center"
+          >
+            {renderTabContent()}
           </Div>
         </Div>
       </Div>

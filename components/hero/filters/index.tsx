@@ -30,16 +30,13 @@ const Aside = () => {
       p="1rem"
       bg="#0E1218"
       color="#FFF"
-      height="100%"
-      display="flex"
       overflowY="auto"
-      maxHeight="100%"
-      minWidth="16.5rem"
       alignItems="center"
       borderRadius="1rem"
       flexDirection="column"
       justifyContent="center"
-      width={['100%', '100%', '100%', '16.5rem']}
+      height={['60vh', '60vh', '60vh', '100%', '100%']}
+      width={['100%', '100%', '100%', '16.5rem', '16.5rem']}
     >
       <Div mb="1rem" width="100%">
         <Span fontWeight={700} fontSize="0.875rem" lineHeight="1.875rem">
