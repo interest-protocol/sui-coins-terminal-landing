@@ -24,12 +24,15 @@ const HeaderBar = () => {
     <Header
       bg="#0E1218"
       pb="2rem"
-      width="90vw"
+      width="100%"
       display="inline-flex"
       flexDirection="column"
       zIndex={openMenu ? 9 : 'inherit'}
       minHeight={openMenu ? '100vh' : 'auto'}
       position={openMenu ? 'fixed' : 'unset'}
+      left="0rem"
+      px={openMenu ? '1rem' : 'unset'}
+      pt="2rem"
     >
       <Div
         pb="1rem"
