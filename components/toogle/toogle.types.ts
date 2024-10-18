@@ -1,9 +1,8 @@
-import { ReactNode } from 'react';
-
 export interface ToggleComponentProps {
   label?: string;
+  subtitle?: string;
+  hasToggle: boolean;
   description?: string;
-  defaultValue: boolean;
-  activeIcon?: ReactNode;
+  hasBorderTop: boolean;
   hasBorderBottom?: boolean;
 }

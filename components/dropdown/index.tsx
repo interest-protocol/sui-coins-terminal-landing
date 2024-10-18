@@ -1,5 +1,5 @@
 import { Button, Div } from '@stylin.js/elements';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useState } from 'react';
 import { v4 } from 'uuid';
 
 import { ArrowDownSVG } from '@/components/svg';
@@ -8,7 +8,6 @@ import { DropdownProps } from './dropdown.types';
 
 const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -18,47 +17,25 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
     onSelect(value);
     setIsDropdownOpen(false);
   };
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    ) {
-      setIsDropdownOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    if (isDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isDropdownOpen]);
-
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-expect-error
-    <Div ref={dropdownRef} position="relative" width="100%" mt="0.6rem">
+    <Div position="relative" width="100%" mt="0.6rem">
       <Button
         p="1rem"
+        mr="0.5rem "
         width="100%"
-        height="3rem"
         display="flex"
         fontSize="1rem"
+        height="2.75rem"
         cursor="pointer"
         color="#353A3E"
         alignItems="center"
         borderRadius="0.5rem"
         background="#EDEDF1"
-        onClick={toggleDropdown}
         textTransform="capitalize"
         border="1px solid #E0E0D7"
         justifyContent="space-between"
         textAlign={['left', 'left', 'left', 'right']}
+        onClick={toggleDropdown}
       >
         {defaultValue}
         <Div width="1.5rem" height="1.5rem">
@@ -69,29 +46,29 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
         <Div
           my="0.5rem"
           zIndex={999}
-          bg="#FFFFFF"
           width="100%"
-          maxHeight="32rem"
+          display="flex"
           overflowY="auto"
+          maxHeight="32rem"
+          alignItems="flex-start"
           position="absolute"
-          borderRadius="0.25rem"
-          border="1px solid #E0E0D7"
-          boxShadow="0 0 10px #c3c6c891"
+          borderRadius="0.5rem"
+          background="#EDEDF1"
+          flexDirection="column"
+          justifyContent="flex-start"
+          border="1px solid #A8A8A8"
         >
           {menuItems.map((value: string | number) => (
             <Div
+              p="1rem"
               key={v4()}
-              p="0.7rem"
-              display="flex"
-              color="#353A3E"
+              width="100%"
               fontSize="1rem"
-              cursor="pointer"
-              alignItems="flex-start"
+              color="#353A3E"
+              background="#EDEDF1"
               textTransform="capitalize"
-              borderBottom="1px solid #E0E0D7"
-              justifyContent="flex-start"
               nHover={{
-                backgroundColor: '#d6d6cc',
+                backgroundColor: '#EBEDFF',
                 transition: 'all 0.5s ease-in-out',
               }}
               onClick={() => handleMenuItemClick(value as string)}

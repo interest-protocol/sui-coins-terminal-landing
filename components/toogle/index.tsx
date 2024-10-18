@@ -5,8 +5,10 @@ import { ToggleComponentProps } from './toogle.types';
 
 export const ToggleComponent: FC<ToggleComponentProps> = ({
   label,
-  activeIcon,
+  subtitle,
   description,
+  hasToggle,
+  hasBorderTop,
   hasBorderBottom,
 }) => {
   return (
@@ -15,6 +17,7 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
       display="flex"
       alignItems="center"
       justifyContent="space-between"
+      borderTop={hasBorderTop ? '1px solid #A8A8A8' : ''}
       borderBottom={hasBorderBottom ? '1px solid #A8A8A8' : ''}
     >
       <Div py="1rem">
@@ -33,15 +36,24 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
           lineHeight="1.125rem"
         >
           {description}
-          {activeIcon}
+        </P>
+        <P
+          color="#D87706"
+          fontWeight={400}
+          fontSize="0.75rem"
+          lineHeight="1.125rem"
+        >
+          {subtitle}
         </P>
       </Div>
-      <Div pl="1.5rem">
-        <Label className="switch">
-          <Input type="checkbox" />
-          <Span className="slider round"></Span>
-        </Label>
-      </Div>
+      {hasToggle && (
+        <Div pl="1.5rem">
+          <Label className="switch">
+            <Input type="checkbox" />
+            <Span className="slider round"></Span>
+          </Label>
+        </Div>
+      )}
     </Div>
   );
 };
