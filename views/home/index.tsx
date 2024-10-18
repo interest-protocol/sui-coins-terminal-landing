@@ -2,6 +2,12 @@ import { FC } from 'react';
 
 import { Layout } from '@/components';
 
-const Home: FC = () => <Layout></Layout>;
+import { PartnerSection } from '../components';
+
+const Home: FC = () => (
+  <Layout>
+    <PartnerSection />
+  </Layout>
+);
 
 export default Home;
