@@ -10,6 +10,7 @@ const FooterBar: FC = () => {
       py="2rem"
       width="100%"
       bg="#0E1218"
+      gap="1rem"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
