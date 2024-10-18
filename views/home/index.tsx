@@ -1,11 +1,14 @@
 import { FC } from 'react';
 
 import { Layout } from '@/components';
-import Hero from '@/components/hero';
+
+import { HeroSection, PartnerSection, TerminalSection } from '../components';
 
 const Home: FC = () => (
   <Layout>
-    <Hero />
+    <HeroSection />
+    <TerminalSection />
+    <PartnerSection />
   </Layout>
 );
 

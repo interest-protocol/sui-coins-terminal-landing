@@ -8,7 +8,7 @@ import {
 } from '@/components/svg';
 import { Tabs } from '@/components/tabs';
 
-import { WIDGET_ITEMS } from '../hero.data';
+import { WIDGET_ITEMS } from '../../terminal.data';
 
 const HeroWidget = () => {
   return (

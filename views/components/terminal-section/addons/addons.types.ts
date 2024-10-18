@@ -1,4 +1,4 @@
-export interface FilterForm {
+export interface AddonsFormProps {
   template: string;
   fixedAmount: boolean;
   exactOutputMode: string;

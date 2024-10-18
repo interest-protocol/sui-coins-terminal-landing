@@ -1,4 +1,4 @@
-export const TABS_DATA = [
+export const TERMINAL_TYPE = [
   {
     label: 'MODAL',
     description: 'SuiCoin renders as a modal and takes up the whole screen.',

@@ -1,14 +1,14 @@
 import { Div, Span } from '@stylin.js/elements';
 import { useForm, useWatch } from 'react-hook-form';
 
-import Dropdown from '@/components/element/dropdown';
-import { ToggleComponent } from '@/components/element/toogle';
+import Dropdown from '@/components/dropdown';
+import { ToggleComponent } from '@/components/toogle';
 
-import { FilterForm } from './filter.types';
+import { AddonsFormProps } from './addons.types';
 
-const Aside = () => {
+const AddonsBar = () => {
   const templateValues = ['default', 'value 1', 'value 2'];
-  const form = useForm<FilterForm>({
+  const form = useForm<AddonsFormProps>({
     defaultValues: {
       template: templateValues[0],
     },
@@ -36,7 +36,8 @@ const Aside = () => {
       flexDirection="column"
       justifyContent="center"
       height={['60vh', '60vh', '60vh', '100%', '100%']}
-      width={['100%', '100%', '100%', '16.5rem', '16.5rem']}
+      width={['100%', '100%', '100%', '20%', '20%']}
+      minWidth={['100%', '100%', '100%', '20%', '20%']}
     >
       <Div mb="1rem" width="100%">
         <Span fontWeight={700} fontSize="0.875rem" lineHeight="1.875rem">
@@ -104,4 +105,4 @@ const Aside = () => {
   );
 };
 
-export default Aside;
+export default AddonsBar;
