@@ -4,12 +4,10 @@ import { Div } from '@stylin.js/elements';
 const IntegratedTerminal = () => {
   return (
     <Div
+      height="90%"
       display="flex"
-      alignItems="center"
-      flexDirection="column"
       justifyContent="center"
       width={['90%', '90%', '90%', '50%', '50%']}
-      height="90%"
     >
       <SwapTerminal
         typeIn="0x2::sui::SUI" // SUI address
