@@ -3,9 +3,10 @@ import { useState } from 'react';
 
 import { Tabs } from '../../../../components/tabs';
 import { TERMINAL_TYPE } from '../terminal.data';
-import { IntegratedTab, ModalTab, WidgetTab } from './tabs';
+// import { IntegratedTab, ModalTab, WidgetTab } from './tabs';
+import HeroWidget from './tabs/widget-terminal';
 
-const TerminalOption = [ModalTab, IntegratedTab, WidgetTab];
+// const TerminalOption = [ModalTab, IntegratedTab, WidgetTab];
 
 const TerminalForm = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -14,10 +15,10 @@ const TerminalForm = () => {
     setTabIndex(index);
   };
 
-  const renderTabContent = () => {
-    const TabContent = TerminalOption[tabIndex];
-    return <TabContent />;
-  };
+  // const renderTabContent = () => {
+  //   const TabContent = TerminalOption[tabIndex];
+  //   return <TabContent />;
+  // };
 
   return (
     <Div
@@ -62,7 +63,7 @@ const TerminalForm = () => {
         my="auto"
         justifyContent="center"
       >
-        {renderTabContent()}
+        <HeroWidget />
       </Div>
     </Div>
   );

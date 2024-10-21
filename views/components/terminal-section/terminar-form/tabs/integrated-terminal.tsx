@@ -1,7 +1,7 @@
 import { SwapTerminal } from '@interest-protocol/sui-coins-terminal';
 import { Div } from '@stylin.js/elements';
 
-const HeroIntegrated = () => {
+const IntegratedTerminal = () => {
   return (
     <Div
       display="flex"
@@ -20,4 +20,4 @@ const HeroIntegrated = () => {
   );
 };
 
-export default HeroIntegrated;
+export default IntegratedTerminal;

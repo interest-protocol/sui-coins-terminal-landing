@@ -8,9 +8,10 @@ import {
 } from '@/components/svg';
 import { Tabs } from '@/components/tabs';
 
-import { WIDGET_ITEMS } from '../../terminal.data';
+import { WIDGET_ITEMS } from '../../../terminal.data';
+import SwapModalTerminal from './swap-modal-terminal';
 
-const HeroWidget = () => {
+const WidgetTerminal = () => {
   return (
     <Div
       px="1rem"
@@ -48,11 +49,11 @@ const HeroWidget = () => {
         </Div>
         <Div width="15.75rem" textAlign="center">
           <P
-            px={['2rem', '2rem', '2rem', 'unset', 'unset']}
             color="#B6B8BB"
-            fontSize={['0.75rem', '0.75rem', '0.75rem', '0.75rem', '0.75rem']}
             fontWeight="500"
             lineHeight="1.875rem"
+            px={['2rem', '2rem', '2rem', 'unset', 'unset']}
+            fontSize={['0.75rem', '0.75rem', '0.75rem', '0.75rem', '0.75rem']}
           >
             Click on the arrows to see how the Jupiter Widget will appear on
             your web browser.Click on the logo to view the Jupiter Swap Modal.
@@ -80,14 +81,14 @@ const HeroWidget = () => {
       <Div
         display="flex"
         alignItems="center"
-        flexDirection={['column', 'column', 'row', 'row', 'row']}
         justifyContent="space-between"
+        flexDirection={['column', 'column', 'row', 'row', 'row']}
       >
         <Span
-          mb={['1rem', '1rem', 'unset', 'unset', 'unset']}
-          fontSize="0.875rem"
-          fontWeight="700"
           color="#fff"
+          fontWeight="700"
+          fontSize="0.875rem"
+          mb={['1rem', '1rem', 'unset', 'unset', 'unset']}
         >
           Set Size
         </Span>
@@ -97,8 +98,9 @@ const HeroWidget = () => {
           <Tabs items={WIDGET_ITEMS} />
         </Div>
       </Div>
+      <SwapModalTerminal />
     </Div>
   );
 };
 
-export default HeroWidget;
+export default WidgetTerminal;

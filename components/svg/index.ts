@@ -4,6 +4,7 @@ export { default as ArrowBottomRightSVG } from './arrow-bottom-right';
 export { default as ArrowDownSVG } from './arrow-down';
 export { default as ArrowTopLeftSVG } from './arrow-top-left';
 export { default as ArrowTopRightSVG } from './arrow-top-right';
+export { default as ChevronBottomSVG } from './chebron-bottom';
 export { default as DiscordSVG } from './discord';
 export { default as GithubSVG } from './github';
 export { default as LogoSVG } from './logo';
