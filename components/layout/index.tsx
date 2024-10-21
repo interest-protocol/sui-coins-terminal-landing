@@ -9,7 +9,7 @@ import Footer from './footer';
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <ModalProvider>
     <Main
-      pt={['0', '0', '0', '3.5rem', '3.5rem']}
+      py={['0', '0', '0', '3.5rem', '3.5rem']}
       px={['1rem', '1rem', '1rem', '4.5rem', '4.5rem']}
       position="relative"
     >

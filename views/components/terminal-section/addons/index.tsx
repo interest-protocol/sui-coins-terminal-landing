@@ -101,6 +101,36 @@ const AddonsBar = () => {
           description="Prevent Initial slippage from overriding user's last saved slippage"
         />
       </Div>
+      <Div width="100%">
+        <ToggleComponent
+          defaultValue={false}
+          hasBorderBottom={true}
+          label="Strict Token List"
+          description="The strict list contains a smaller set of validated tokens. To see all tokens, toggle 'off'."
+        />
+        <ToggleComponent
+          defaultValue={false}
+          hasBorderBottom={true}
+          label="Simulate wallet"
+          description="Simulate Terminal with a fake wallet passthrough (Testing available on Desktop only)"
+        />
+      </Div>
+      <Div width="100%" pb="1rem">
+        <Span
+          mt="1.5rem"
+          mb="0.5rem"
+          fontWeight={700}
+          fontSize="0.875rem"
+          lineHeight="1.875rem"
+        >
+          Preferred Explorer
+        </Span>
+        <Dropdown
+          defaultValue={template}
+          menuItems={templateValues}
+          onSelect={(values) => handleDropdown(values)}
+        />
+      </Div>
     </Div>
   );
 };

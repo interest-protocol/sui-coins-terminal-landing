@@ -130,7 +130,7 @@ const WidgetTerminal = () => {
         </Div>
       </Div>
       <Div
-        zIndex={99}
+        zIndex={10}
         width="auto"
         height="auto"
         display="flex"

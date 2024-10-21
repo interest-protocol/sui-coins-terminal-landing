@@ -27,7 +27,7 @@ const HeaderBar = () => {
       width="100%"
       display="inline-flex"
       flexDirection="column"
-      zIndex={openMenu ? 9 : 'inherit'}
+      zIndex={openMenu ? 99 : 'inherit'}
       minHeight={openMenu ? '100vh' : 'auto'}
       position={openMenu ? 'fixed' : 'unset'}
       left="0rem"

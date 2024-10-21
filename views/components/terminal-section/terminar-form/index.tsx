@@ -55,11 +55,11 @@ const TerminalForm = () => {
         </P>
       </Div>
       <Div
-        my="auto"
-        height="85%"
         display="flex"
         alignItems="center"
         width="fill-available"
+        height="85%"
+        my="auto"
         justifyContent="center"
       >
         {renderTabContent()}
