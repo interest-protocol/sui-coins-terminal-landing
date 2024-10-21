@@ -5,7 +5,7 @@ import { v4 } from 'uuid';
 import { PARTNERS_DATA } from './partners.data';
 
 const Partners: FC = () => (
-  <Div py="6rem" display="flex">
+  <Div pt="6rem" display="flex">
     <Div
       display="flex"
       alignItems="center"
