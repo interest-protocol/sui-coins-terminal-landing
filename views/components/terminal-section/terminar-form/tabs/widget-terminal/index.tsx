@@ -174,7 +174,12 @@ const WidgetTerminal = () => {
           )}
         </Div>
         {isModalOpen && (
-          <Div bg="#171f28" height="40rem" display="flex" borderRadius="1rem">
+          <Div
+            bg="#171f28"
+            display="flex"
+            borderRadius="1rem"
+            height={['70vh', '70vh', '70vh', '40rem', '40rem']}
+          >
             <SwapTerminal
               typeIn="0x2::sui::SUI" // SUI address
               projectAddress="0xdb3a22be6a37c340c6fd3f67a7221dfb841c818442d856f5d17726f4bcf1c8af" // Project DAO address
