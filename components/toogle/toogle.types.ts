@@ -6,4 +6,5 @@ export interface ToggleComponentProps {
   defaultValue: boolean;
   activeIcon?: ReactNode;
   hasBorderBottom?: boolean;
+  onChange: (value: boolean) => void;
 }

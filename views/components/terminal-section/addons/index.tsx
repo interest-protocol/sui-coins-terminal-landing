@@ -8,21 +8,32 @@ import { AddonsFormProps } from './addons.types';
 
 const AddonsBar = () => {
   const templateValues = ['default', 'value 1', 'value 2'];
+
   const form = useForm<AddonsFormProps>({
     defaultValues: {
+      fixedAmount: false,
+      fixedInputMint: false,
+      simulateWallet: false,
+      fixedOutputMint: false,
+      strictTokenList: false,
+      useUserSlippage: false,
       template: templateValues[0],
+      exactOutputMode: templateValues[0],
+      preferredExplorer: templateValues[0],
     },
   });
 
   const { control, setValue } = form;
-  const template = useWatch({
-    control,
-    name: 'template',
-  });
+  const template = useWatch({ control, name: 'template' });
+  const exactOutputMode = useWatch({ control, name: 'exactOutputMode' });
+  const preferredExplorer = useWatch({ control, name: 'preferredExplorer' });
 
-  const handleDropdown = (value: string) => {
-    templateValues.filter((item) => item === value);
-    setValue('template', value);
+  const handleDropdown = (field: keyof AddonsFormProps, value: string) => {
+    setValue(field, value);
+  };
+
+  const handleToggle = (field: keyof AddonsFormProps, value: boolean) => {
+    setValue(field, value);
   };
 
   return (
@@ -46,7 +57,7 @@ const AddonsBar = () => {
         <Dropdown
           defaultValue={template}
           menuItems={templateValues}
-          onSelect={(values) => handleDropdown(values)}
+          onSelect={(value) => handleDropdown('template', value)}
         />
       </Div>
       <Div mb="1rem">
@@ -63,12 +74,14 @@ const AddonsBar = () => {
           hasBorderBottom={true}
           label="Fixed input mint"
           description="Input mint cannot be changed"
+          onChange={(value) => handleToggle('fixedInputMint', value)}
         />
         <ToggleComponent
           defaultValue={false}
           hasBorderBottom={true}
-          label="Fixed input mint"
-          description="Input mint cannot be changed"
+          label="Fixed output mint"
+          description="Output mint cannot be changed"
+          onChange={(value) => handleToggle('fixedOutputMint', value)}
         />
       </Div>
       <Div width="100%" borderBottom="1px solid #A8A8A8" pb="1rem">
@@ -82,9 +95,9 @@ const AddonsBar = () => {
           Exact output mode
         </Span>
         <Dropdown
-          defaultValue={template}
           menuItems={templateValues}
-          onSelect={(values) => handleDropdown(values)}
+          defaultValue={exactOutputMode}
+          onSelect={(value) => handleDropdown('exactOutputMode', value)}
         />
       </Div>
       <Div width="100%">
@@ -92,12 +105,14 @@ const AddonsBar = () => {
           defaultValue={false}
           hasBorderBottom={true}
           label="Fixed amount"
+          onChange={(value) => handleToggle('fixedAmount', value)}
           description="Depending on Exact In / Exact Out, the amount cannot be changed"
         />
         <ToggleComponent
           defaultValue={false}
           hasBorderBottom={true}
           label="Use user slippage"
+          onChange={(value) => handleToggle('useUserSlippage', value)}
           description="Prevent Initial slippage from overriding user's last saved slippage"
         />
       </Div>
@@ -106,12 +121,14 @@ const AddonsBar = () => {
           defaultValue={false}
           hasBorderBottom={true}
           label="Strict Token List"
+          onChange={(value) => handleToggle('strictTokenList', value)}
           description="The strict list contains a smaller set of validated tokens. To see all tokens, toggle 'off'."
         />
         <ToggleComponent
           defaultValue={false}
           hasBorderBottom={true}
           label="Simulate wallet"
+          onChange={(value) => handleToggle('simulateWallet', value)}
           description="Simulate Terminal with a fake wallet passthrough (Testing available on Desktop only)"
         />
       </Div>
@@ -126,9 +143,9 @@ const AddonsBar = () => {
           Preferred Explorer
         </Span>
         <Dropdown
-          defaultValue={template}
           menuItems={templateValues}
-          onSelect={(values) => handleDropdown(values)}
+          defaultValue={preferredExplorer}
+          onSelect={(value) => handleDropdown('preferredExplorer', value)}
         />
       </Div>
     </Div>
