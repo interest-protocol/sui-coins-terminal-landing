@@ -3,7 +3,7 @@ import { Button, Div, Span } from '@stylin.js/elements';
 
 import { useModal } from '@/hooks/use-modal';
 
-const HeroModal = () => {
+const ModalTerminal = () => {
   const { setModal, handleClose } = useModal();
 
   const handleModal = () => {
@@ -48,4 +48,4 @@ const HeroModal = () => {
   );
 };
 
-export default HeroModal;
+export default ModalTerminal;
