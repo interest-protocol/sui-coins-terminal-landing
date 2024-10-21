@@ -1,5 +1,5 @@
 import { Div, P, Span } from '@stylin.js/elements';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   ArrowBottomLeftSVG,
@@ -21,6 +21,7 @@ const WidgetTerminal = () => {
   const [widgetSize, setWidgetSize] = useState<string>('3.5rem');
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [iconPosition, setIconPosition] = useState<IconPosition>(null);
+  const widgetRef = useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
     setIsModalOpen(!isModalOpen);
@@ -34,6 +35,26 @@ const WidgetTerminal = () => {
     if (tabIndex === 0) setWidgetSize('2.5rem');
     if (tabIndex === 1) setWidgetSize('3rem');
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      widgetRef.current &&
+      !widgetRef.current.contains(event.target as Node)
+    ) {
+      setIsModalOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isModalOpen]);
 
   return (
     <Div
@@ -130,6 +151,9 @@ const WidgetTerminal = () => {
         </Div>
       </Div>
       <Div
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-expect-error
+        ref={widgetRef}
         zIndex={10}
         width="auto"
         height="auto"
