@@ -5,10 +5,15 @@ import { ToggleComponentProps } from './toogle.types';
 
 export const ToggleComponent: FC<ToggleComponentProps> = ({
   label,
+  onChange,
   activeIcon,
   description,
   hasBorderBottom,
 }) => {
+  const handleToggleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange && onChange(event.target.checked);
+  };
+
   return (
     <Div
       width="100%"
@@ -38,7 +43,7 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
       </Div>
       <Div pl="1.5rem">
         <Label className="switch">
-          <Input type="checkbox" />
+          <Input type="checkbox" onChange={handleToggleChange} />{' '}
           <Span className="slider round"></Span>
         </Label>
       </Div>
