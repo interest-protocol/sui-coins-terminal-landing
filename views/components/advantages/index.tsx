@@ -8,10 +8,10 @@ import AdvantageItem from './advantages-item';
 const AdvantageSection: FC = () => (
   <Div
     my="6rem"
-    width={['100%', '100%', '100%', '62rem', '76rem']}
+    gap="6rem"
     display="flex"
     flexDirection="column"
-    gap="6rem"
+    width={['100%', '100%', '100%', '62rem', '76rem']}
   >
     {ADVANTAGE_DATA.map((advantage) => (
       <AdvantageItem key={v4()} {...advantage} />

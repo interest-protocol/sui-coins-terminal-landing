@@ -11,8 +11,9 @@ export interface AdvantageItemProps extends AdvantageItemCodeSideProps {
 
 export interface AdvantageItemButtonProps {
   title: string;
-  onClick?: () => void;
   Icon?: FC<SVGProps>;
+  onClick?: () => void;
+  isCopyToClipBoard?: boolean;
 }
 
 export interface AdvantageItemCodeSideProps {

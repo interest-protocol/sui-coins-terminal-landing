@@ -10,9 +10,32 @@ export const ADVANTAGE_DATA: ReadonlyArray<AdvantageItemProps> = [
     buttonList: [
       {
         title: 'Copy to Clipboard',
+        isCopyToClipBoard: true,
       },
     ],
-    code: "// console.log('1+1')",
+    code: `// Type some code ->
+
+console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+// â é ù ï ø ç Ã Ē Æ œ
+
+function updateGutters cm 
+    var gutters cm display gutters
+        __specs cm options gutters
+
+  removeChildren gutters
+
+  for var i 0 i specs length i 
+      var gutterClass __specs i
+      var gElt gutters appendChild
+          elt
+              "div"
+              null
+              "CodeMirror-gutter " gutterClass
+
+    if  gutterClass   "CodeMirror-linenumbers"
+        cm display lineGutter   gElt
+        gElt style width     cm display lineNumWidth
+`,
   },
   {
     invert: true,
@@ -29,7 +52,29 @@ export const ADVANTAGE_DATA: ReadonlyArray<AdvantageItemProps> = [
         Icon: OpenInNewSVG,
       },
     ],
-    code: "// console.log('1+1')",
+    code: `// Type some code ->
+
+console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+// â é ù ï ø ç Ã Ē Æ œ
+
+function updateGutters cm 
+    var gutters cm display gutters
+        __specs cm options gutters
+
+  removeChildren gutters
+
+  for var i 0 i specs length i 
+      var gutterClass __specs i
+      var gElt gutters appendChild
+          elt
+              "div"
+              null
+              "CodeMirror-gutter " gutterClass
+
+    if  gutterClass   "CodeMirror-linenumbers"
+        cm display lineGutter   gElt
+        gElt style width     cm display lineNumWidth
+`,
   },
   {
     title: 'Alternatively, install from NPM',
@@ -38,8 +83,31 @@ export const ADVANTAGE_DATA: ReadonlyArray<AdvantageItemProps> = [
     buttonList: [
       {
         title: 'Copy to clipboard',
+        isCopyToClipBoard: true,
       },
     ],
-    code: "// console.log('1+1')",
+    code: `// Type some code ->
+
+console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+// â é ù ï ø ç Ã Ē Æ œ
+
+function updateGutters cm 
+    var gutters cm display gutters
+        __specs cm options gutters
+
+  removeChildren gutters
+
+  for var i 0 i specs length i 
+      var gutterClass __specs i
+      var gElt gutters appendChild
+          elt
+              "div"
+              null
+              "CodeMirror-gutter " gutterClass
+
+    if  gutterClass   "CodeMirror-linenumbers"
+        cm display lineGutter   gElt
+        gElt style width     cm display lineNumWidth
+`,
   },
 ];
