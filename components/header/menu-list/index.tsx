@@ -12,8 +12,9 @@ const MenuList: FC = () => {
           key={index}
           color="#fff"
           display="flex"
-          listStyle="none"
           fontSize="1rem"
+          listStyle="none"
+          fontFamily="Satoshi"
           nHover={{ opacity: '.8' }}
           transition="all 300ms ease-in-out"
         >

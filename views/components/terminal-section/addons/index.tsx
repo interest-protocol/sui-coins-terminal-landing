@@ -57,7 +57,12 @@ const AddonsBar = () => {
       minWidth={['100%', '100%', '100%', '20%', '20%']}
     >
       <Div mb="1rem" width="100%">
-        <Span fontWeight={700} fontSize="0.875rem" lineHeight="1.875rem">
+        <Span
+          fontWeight={700}
+          fontSize="0.875rem"
+          fontFamily="Satoshi"
+          lineHeight="1.875rem"
+        >
           Template
         </Span>
         <Dropdown
@@ -71,6 +76,7 @@ const AddonsBar = () => {
           mt="0.5rem"
           fontWeight={700}
           fontSize="0.875rem"
+          fontFamily="Satoshi"
           lineHeight="1.875rem"
         >
           Things you can configure
@@ -96,6 +102,7 @@ const AddonsBar = () => {
           mb="0.5rem"
           fontWeight={700}
           fontSize="0.875rem"
+          fontFamily="Satoshi"
           lineHeight="1.875rem"
         >
           Exact output mode
@@ -128,6 +135,7 @@ const AddonsBar = () => {
             color="#B6B8BB"
             fontWeight={700}
             fontSize="0.875rem"
+            fontFamily="Satoshi"
             lineHeight="1.313rem"
           >
             Use user slippage
@@ -136,10 +144,11 @@ const AddonsBar = () => {
             color="#64686E"
             fontWeight={400}
             fontSize="0.75rem"
+            fontFamily="Satoshi"
             lineHeight="1.125rem"
           >
             Slippage to be prefilled on first load
-            <P color="#D87706">Use user slippage is true</P>
+            <Span color="#D87706">Use user slippage is true</Span>
           </P>
         </Div>
         <Input
@@ -163,6 +172,7 @@ const AddonsBar = () => {
             color="#B6B8BB"
             fontWeight={700}
             fontSize="0.875rem"
+            fontFamily="Satoshi"
             lineHeight="1.313rem"
           >
             Initial amount
@@ -171,6 +181,7 @@ const AddonsBar = () => {
             color="#64686E"
             fontWeight={400}
             fontSize="0.75rem"
+            fontFamily="Satoshi"
             lineHeight="1.125rem"
           >
             Slippage to be prefilled on first load
@@ -213,6 +224,7 @@ const AddonsBar = () => {
           mb="0.5rem"
           fontWeight={700}
           fontSize="0.875rem"
+          fontFamily="Satoshi"
           lineHeight="1.875rem"
         >
           Preferred Explorer
