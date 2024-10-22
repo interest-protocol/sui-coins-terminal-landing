@@ -17,6 +17,7 @@ const Hero: FC = () => {
         <Div color="#fff" display="flex" justifyContent="center">
           <H1
             mb="2rem"
+            fontFamily="Satoshi"
             fontSize={['2rem', '2rem', '2rem', '3.75rem', '3.75rem']}
           >
             SUICOIN Terminal
@@ -26,6 +27,7 @@ const Hero: FC = () => {
           <P
             fontWeight="500"
             textAlign="center"
+            fontFamily="Satoshi"
             lineHeight="1.875rem"
             fontSize={['0.875rem', '0.875rem', '0.875rem', '1rem', '1rem']}
           >

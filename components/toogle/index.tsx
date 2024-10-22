@@ -27,6 +27,7 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
           color="#B6B8BB"
           fontWeight={700}
           fontSize="0.875rem"
+          fontFamily="Satoshi"
           lineHeight="1.313rem"
         >
           {label}
@@ -35,6 +36,7 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
           color="#64686E"
           fontWeight={400}
           fontSize="0.75rem"
+          fontFamily="Satoshi"
           lineHeight="1.125rem"
         >
           {description}
@@ -44,7 +46,7 @@ export const ToggleComponent: FC<ToggleComponentProps> = ({
       <Div pl="1.5rem">
         <Label className="switch">
           <Input type="checkbox" onChange={handleToggleChange} />{' '}
-          <Span className="slider round"></Span>
+          <Span fontFamily="Satoshi" className="slider round"></Span>
         </Label>
       </Div>
     </Div>
