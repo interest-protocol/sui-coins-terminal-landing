@@ -2,43 +2,14 @@ import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
   @font-face {
-    font-family: 'Proto';
-    src: url('/fonts/proto/ProtoMono-Regular.eot');
-    src:
-      local('Proto Mono Regular'),
-      local('ProtoMono-Regular'),
-      url('/fonts/proto/ProtoMono-Regular.eot?#iefix')
-        format('embedded-opentype'),
-      url('/fonts/proto/ProtoMono-Regular.woff2') format('woff2'),
-      url('/fonts/proto/ProtoMono-Regular.woff') format('woff'),
-      url('/fonts/proto/ProtoMono-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Proto';
-    src: url('../fonts/proto/ProtoMono-Medium.eot');
-    src:
-      local('Proto Mono Medium'),
-      local('ProtoMono-Medium'),
-      url('../fonts/proto/ProtoMono-Medium.eot?#iefix')
-        format('embedded-opentype'),
-      url('../fonts/proto/ProtoMono-Medium.woff2') format('woff2'),
-      url('../fonts/proto/ProtoMono-Medium.woff') format('woff'),
-      url('../fonts/proto/ProtoMono-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
     font-family: 'Satoshi';
     src:
-      url('/fonts/satoshi/Satoshi-Medium.woff2') format('woff2'),
-      url('/fonts/satoshi/Satoshi-Medium.woff') format('woff'),
-      url('/fonts/satoshi/Satoshi-Medium.ttf') format('truetype');
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.woff2')
+        format('woff2'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.woff')
+        format('woff'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Medium.ttf')
+        format('truetype');
     font-weight: 500;
     font-display: swap;
     font-style: normal;
@@ -47,42 +18,12 @@ export const GlobalStyles = css`
   @font-face {
     font-family: 'Satoshi';
     src:
-      url('/fonts/satoshi/Satoshi-Bold.woff2') format('woff2'),
-      url('/fonts/satoshi/Satoshi-Bold.woff') format('woff'),
-      url('/fonts/satoshi/Satoshi-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Source Code Pro';
-    src:
-      url('/fonts/source-code-pro/SourceCodePro-Medium.woff2') format('woff2'),
-      url('/fonts/source-code-pro/SourceCodePro-Medium.woff') format('woff'),
-      url('/fonts/source-code-pro/SourceCodePro-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Source Code Pro';
-    src:
-      url('/fonts/source-code-pro/SourceCodePro-Bold.woff2') format('woff2'),
-      url('/fonts/source-code-pro/SourceCodePro-Bold.woff') format('woff'),
-      url('/fonts/source-code-pro/SourceCodePro-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Source Code Pro';
-    src:
-      url('/fonts/source-code-pro/SourceCodePro-Regular.woff2') format('woff2'),
-      url('/fonts/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
-      url('/fonts/source-code-pro/SourceCodePro-Regular.ttf') format('truetype');
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.woff2')
+        format('woff2'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.woff')
+        format('woff'),
+      url('https://interest-protocol.github.io/fonts/satoshi/Satoshi-Bold.ttf')
+        format('truetype');
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -192,5 +133,11 @@ export const GlobalStyles = css`
 
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .margin,
+  .view-lines,
+  .minimap-decorations-layer {
+    background: #171f28 !important;
   }
 `;
