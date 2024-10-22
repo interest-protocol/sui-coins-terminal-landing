@@ -32,7 +32,7 @@ const HeaderBar = () => {
       position={openMenu ? 'fixed' : 'unset'}
       left="0rem"
       px={openMenu ? '1rem' : 'unset'}
-      pt="2rem"
+      pt={['2rem', '2rem', '2rem', '0', '0']}
     >
       <Div
         pb="1rem"
