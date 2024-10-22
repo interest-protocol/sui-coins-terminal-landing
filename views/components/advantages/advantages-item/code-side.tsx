@@ -25,6 +25,17 @@ const AdvantageItemCodeSide: FC<AdvantageItemCodeSideProps> = ({ code }) => (
         readOnly: true,
         cursorStyle: 'line',
         automaticLayout: true,
+        scrollbar: {
+          vertical: 'hidden',
+        },
+        minimap: {
+          enabled: false,
+        },
+        scrollBeyondLastLine: false,
+        autoIndent: 'full',
+        colorDecorators: true,
+        fontSize: 12.2,
+        lineHeight: 18,
       }}
     />
   </Div>

@@ -21,15 +21,15 @@ const TerminalForm = () => {
 
   return (
     <Div
-      py={['1.5rem', '1.5rem', '1.5rem', '1.5rem', '1.5rem']}
-      px={['0rem', '0rem', '0rem', '1.5rem', '1.5rem']}
       bg="#0E1218"
       height="100%"
       display="flex"
+      alignItems="center"
       width="fill-available"
       borderRadius="inherit"
       flexDirection="column"
-      alignItems="center"
+      py={['1.5rem', '1.5rem', '1.5rem', '1.5rem', '1.5rem']}
+      px={['0rem', '0rem', '0rem', '1.5rem', '1.5rem']}
     >
       <Div
         px="1rem"
@@ -49,6 +49,7 @@ const TerminalForm = () => {
           height="2.25rem"
           textAlign="center"
           fontSize="0.75rem"
+          fontFamily="Satoshi"
           lineHeight="1.125rem"
         >
           {TERMINAL_TYPE[tabIndex].description}

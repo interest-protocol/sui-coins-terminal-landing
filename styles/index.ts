@@ -134,4 +134,10 @@ export const GlobalStyles = css`
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .margin,
+  .view-lines,
+  .minimap-decorations-layer {
+    background: #171f28 !important;
+  }
 `;

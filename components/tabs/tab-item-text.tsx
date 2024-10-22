@@ -19,7 +19,8 @@ const NavItemText: FC<PropsWithChildren<TabItemPropsItemTextProps>> = ({
     >
       <Span
         zIndex={2}
-        fontWeight="600"
+        fontWeight="500"
+        fontFamily="Proto"
         position="relative"
         color={isSelected ? '#000' : '#fff'}
         fontSize={['0.7rem', '0.7rem', '0.7rem', '0.9rem', '0.9rem']}
