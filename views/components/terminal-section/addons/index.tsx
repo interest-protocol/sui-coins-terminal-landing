@@ -141,11 +141,13 @@ const AddonsBar = () => {
             Use user slippage
           </H1>
           <P
+            display="flex"
             color="#64686E"
             fontWeight={400}
             fontSize="0.75rem"
             fontFamily="Satoshi"
             lineHeight="1.125rem"
+            flexDirection="column"
           >
             Slippage to be prefilled on first load
             <Span color="#D87706">Use user slippage is true</Span>

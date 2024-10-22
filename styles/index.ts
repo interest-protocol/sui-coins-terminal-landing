@@ -29,11 +29,62 @@ export const GlobalStyles = css`
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Proto';
+    src:
+      url('https://interest-protocol.github.io/fonts/proto/ProtoMono-Medium.woff2')
+        format('woff2'),
+      url('https://interest-protocol.github.io/fonts/proto/ProtoMono-Medium.woff')
+        format('woff'),
+      url('https://interest-protocol.github.io/fonts/proto/ProtoMono-Medium.ttf')
+        format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    src:
+      url('/fonts/source-code-pro/SourceCodePro-Medium.woff2') format('woff2'),
+      url('/fonts/source-code-pro/SourceCodePro-Medium.woff') format('woff'),
+      url('/fonts/source-code-pro/SourceCodePro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    src:
+      url('/fonts/source-code-pro/SourceCodePro-Bold.woff2') format('woff2'),
+      url('/fonts/source-code-pro/SourceCodePro-Bold.woff') format('woff'),
+      url('/fonts/source-code-pro/SourceCodePro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Source Code Pro';
+    src:
+      url('/fonts/source-code-pro/SourceCodePro-Regular.woff2') format('woff2'),
+      url('/fonts/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+      url('/fonts/source-code-pro/SourceCodePro-Regular.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Satoshi';
+  }
+
+  .mtk1 {
+    font-family: 'Source Code Pro', monospace !important;
   }
 
   html {
