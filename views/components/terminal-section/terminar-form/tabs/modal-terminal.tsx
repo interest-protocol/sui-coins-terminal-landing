@@ -34,7 +34,12 @@ const ModalTerminal = () => {
         width={['50%', '50%', '16.5rem', '16.5rem', '16.5rem']}
         onClick={handleModal}
       />
-      <Span color="#fff" fontWeight="700" fontSize="0.875rem">
+      <Span
+        color="#fff"
+        fontWeight="700"
+        fontSize="0.875rem"
+        fontFamily="Satoshi"
+      >
         Click to Launch Terminal Modal
       </Span>
     </Div>

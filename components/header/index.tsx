@@ -22,17 +22,16 @@ const HeaderBar = () => {
 
   return (
     <Header
-      bg="#0E1218"
       pb="2rem"
+      bg="#0E1218"
       width="100%"
       display="inline-flex"
       flexDirection="column"
+      px={openMenu ? '1rem' : 'unset'}
       zIndex={openMenu ? 99 : 'inherit'}
       minHeight={openMenu ? '100vh' : 'auto'}
       position={openMenu ? 'fixed' : 'unset'}
-      left="0rem"
-      px={openMenu ? '1rem' : 'unset'}
-      pt="2rem"
+      pt={['2rem', '2rem', '2rem', '0', '0']}
     >
       <Div
         pb="1rem"
@@ -51,7 +50,9 @@ const HeaderBar = () => {
             <Div maxHeight="1.5rem" maxWidth="1.5rem" mr="1rem">
               <SuiCoinsLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
             </Div>
-            <H1 fontSize="1rem">Sui Coins</H1>
+            <H1 fontSize="1rem" fontFamily="Satoshi">
+              Sui Coins
+            </H1>
           </Div>
         </Div>
         <Nav gridRowStart="1" gridColumnStart="1" justifySelf="center">

@@ -12,6 +12,7 @@ export { default as LogoSVG } from './logo';
 export { default as MenuSVG } from './menu';
 export { default as MovementSVG } from './movement';
 export { default as MovewiffrensSVG } from './movewiffrens';
+export { default as OpenInNewSVG } from './open-in-new';
 export { default as RouteXSVG } from './route-x';
 export { default as SataySVG } from './satay';
 export { default as SuiCoinsLogoSVG } from './sui-coins-logo';

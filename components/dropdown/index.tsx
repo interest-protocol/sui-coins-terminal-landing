@@ -86,6 +86,7 @@ const Dropdown: FC<DropdownProps> = ({ onSelect, defaultValue, menuItems }) => {
               color="#353A3E"
               fontSize="1rem"
               cursor="pointer"
+              fontFamily="Satoshi"
               alignItems="flex-start"
               textTransform="capitalize"
               borderBottom="1px solid #E0E0D7"

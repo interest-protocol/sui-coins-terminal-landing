@@ -83,6 +83,10 @@ export const GlobalStyles = css`
     font-family: 'Satoshi';
   }
 
+  .mtk1 {
+    font-family: 'Source Code Pro', monospace !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -180,5 +184,11 @@ export const GlobalStyles = css`
 
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .margin,
+  .view-lines,
+  .minimap-decorations-layer {
+    background: #171f28 !important;
   }
 `;

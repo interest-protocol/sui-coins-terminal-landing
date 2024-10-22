@@ -10,7 +10,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
   <ModalProvider>
     <Main
       py={['0', '0', '0', '3.5rem', '3.5rem']}
-      px={['1rem', '1rem', '1rem', '4.5rem', '4.5rem']}
+      px={['1.5rem', '1.5rem', '1.5rem', '4.5rem', '4.5rem']}
       position="relative"
     >
       <Header />
