@@ -18,4 +18,5 @@ export { default as SataySVG } from './satay';
 export { default as SuiCoinsLogoSVG } from './sui-coins-logo';
 export { default as Telegram } from './telegram';
 export { default as TimesSVG } from './times';
+export { default as WidgetSuiCoinsLogoSVG } from './widget-sui-coins-logo';
 export { default as XSVG } from './x';

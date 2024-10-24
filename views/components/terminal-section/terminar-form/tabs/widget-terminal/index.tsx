@@ -8,7 +8,7 @@ import {
   ArrowTopRightSVG,
   ChevronBottomSVG,
   ChevronUpSVG,
-  SuiCoinsLogoSVG,
+  WidgetSuiCoinsLogoSVG,
 } from '@/components/svg';
 import SwapTerminal from '@/components/swap-terminal';
 import { Tabs } from '@/components/tabs';
@@ -19,12 +19,12 @@ import { IconPosition } from './widget-terminal.types';
 
 const WidgetTerminal = () => {
   const [widgetSize, setWidgetSize] = useState<string>('3.5rem');
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isWidgetOpen, setIsWidgetOpen] = useState<boolean>(false);
   const [iconPosition, setIconPosition] = useState<IconPosition>(null);
   const widgetRef = useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsWidgetOpen(!isWidgetOpen);
   };
 
   const handleArrowClick = (position: IconPosition) => {
@@ -33,7 +33,7 @@ const WidgetTerminal = () => {
 
   const handleWidgetSize = (tabIndex: number) => {
     if (tabIndex === 0) setWidgetSize('2.5rem');
-    if (tabIndex === 1) setWidgetSize('3rem');
+    if (tabIndex === 1) setWidgetSize('3.5rem');
   };
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -41,12 +41,12 @@ const WidgetTerminal = () => {
       widgetRef.current &&
       !widgetRef.current.contains(event.target as Node)
     ) {
-      setIsModalOpen(false);
+      setIsWidgetOpen(false);
     }
   };
 
   useEffect(() => {
-    if (isModalOpen) {
+    if (isWidgetOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -54,7 +54,7 @@ const WidgetTerminal = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isModalOpen]);
+  }, [isWidgetOpen]);
 
   return (
     <Div
@@ -151,9 +151,6 @@ const WidgetTerminal = () => {
         </Div>
       </Div>
       <Div
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-expect-error
-        ref={widgetRef}
         zIndex={10}
         width="auto"
         height="auto"
@@ -163,42 +160,47 @@ const WidgetTerminal = () => {
         {...(iconPosition ? positionStyles[iconPosition] : {})}
       >
         <Div
-          p="0.4rem"
-          my="0.8rem"
-          bg="#171F28"
+          my="0.4rem"
           display="flex"
           width={widgetSize}
           height={widgetSize}
           cursor="pointer"
-          nHover={{
-            bg: '#1f2833',
-          }}
-          borderRadius="50%"
+          borderRadius="100%"
           alignItems="center"
           onClick={handleClick}
           justifyContent="center"
-          border="1px solid #171F28"
+          {...(isWidgetOpen && { bg: '#171F28' })}
         >
-          {!isModalOpen ? (
-            <SuiCoinsLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
+          {!isWidgetOpen ? (
+            <WidgetSuiCoinsLogoSVG
+              width="100%"
+              maxWidth="100%"
+              maxHeight="100%"
+            />
           ) : iconPosition?.includes('top') ? (
             <ChevronBottomSVG
               color="#fff"
               width="100%"
-              maxWidth="100%"
-              maxHeight="100%"
+              maxWidth={widgetSize === '2.5rem' ? '2rem' : '2.5rem'}
+              maxHeight={widgetSize === '2.5rem' ? '2rem' : '2.5rem'}
             />
           ) : (
             <ChevronUpSVG
               color="#fff"
               width="100%"
-              maxWidth="100%"
-              maxHeight="100%"
+              maxWidth={widgetSize === '2.5rem' ? '2rem' : '2.5rem'}
+              maxHeight={widgetSize === '2.5rem' ? '2rem' : '2.5rem'}
             />
           )}
         </Div>
-        {isModalOpen && (
-          <Div bg="#171f28" display="flex" borderRadius="1rem">
+        {isWidgetOpen && (
+          <Div // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-expect-error
+            ref={widgetRef}
+            bg="#171f28"
+            display="flex"
+            borderRadius="1rem"
+          >
             <SwapTerminal />
           </Div>
         )}
