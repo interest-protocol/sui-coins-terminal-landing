@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 const SEO: FC = () => (
   <Head>
-    <title>Interface Template</title>
+    <title>Sui Coins - Terminal</title>
     <link rel="icon" type="image/x-icon" href="/icon.svg" />
   </Head>
 );
