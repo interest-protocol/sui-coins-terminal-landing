@@ -1,46 +1,13 @@
 import { Div, H1, Input, P, Span } from '@stylin.js/elements';
-import { useForm, useWatch } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 
-import Dropdown from '@/components/dropdown';
 import { ToggleComponent } from '@/components/toogle';
 
+import AddonAggregator from './addon-aggregator';
 import { AddonsFormProps } from './addons.types';
 
 const AddonsBar = () => {
-  const templateValues = ['default', 'value 1', 'value 2'];
-
-  const form = useForm<AddonsFormProps>({
-    defaultValues: {
-      initialAmount: '',
-      fixedAmount: false,
-      fixedInputMint: false,
-      inputUserSlippage: '',
-      simulateWallet: false,
-      fixedOutputMint: false,
-      strictTokenList: false,
-      useUserSlippage: false,
-      template: templateValues[0],
-      exactOutputMode: templateValues[0],
-      preferredExplorer: templateValues[0],
-    },
-  });
-
-  const { control, setValue } = form;
-  const template = useWatch({ control, name: 'template' });
-  const exactOutputMode = useWatch({ control, name: 'exactOutputMode' });
-  const preferredExplorer = useWatch({ control, name: 'preferredExplorer' });
-
-  const handleDropdown = (field: keyof AddonsFormProps, value: string) => {
-    setValue(field, value);
-  };
-
-  const handleToggle = (field: keyof AddonsFormProps, value: boolean) => {
-    setValue(field, value);
-  };
-
-  const handleOnInputChange = (field: keyof AddonsFormProps, value: string) => {
-    setValue(field, value);
-  };
+  const { setValue, register } = useFormContext<AddonsFormProps>();
 
   return (
     <Div
@@ -56,19 +23,38 @@ const AddonsBar = () => {
       width={['100%', '100%', '100%', '20%', '20%']}
       minWidth={['100%', '100%', '100%', '20%', '20%']}
     >
-      <Div mb="1rem" width="100%">
-        <Span
-          fontWeight={700}
-          fontSize="0.875rem"
-          fontFamily="Satoshi"
-          lineHeight="1.875rem"
-        >
-          Template
-        </Span>
-        <Dropdown
-          defaultValue={template}
-          menuItems={templateValues}
-          onSelect={(value) => handleDropdown('template', value)}
+      <Div pt="1rem" width="100%" borderBottom="1px solid #A8A8A8">
+        <Div pb="0.5rem">
+          <H1
+            color="#B6B8BB"
+            fontWeight={700}
+            fontSize="0.875rem"
+            fontFamily="Satoshi"
+            lineHeight="1.313rem"
+          >
+            Project Address
+          </H1>
+          <P
+            color="#64686E"
+            fontWeight={400}
+            fontSize="0.75rem"
+            fontFamily="Satoshi"
+            lineHeight="1.125rem"
+          >
+            Insert your project address to get {'"future"'} fees from Swapping
+          </P>
+        </Div>
+        <Input
+          p="1rem"
+          mb="1.5rem"
+          type="text"
+          width="100%"
+          color="#353A3E"
+          height="2.75rem"
+          background="#EDEDF1"
+          borderRadius="0.5rem"
+          border="1px solid #E0E0D7"
+          {...register('projectAddress')}
         />
       </Div>
       <Div mb="1rem">
@@ -81,55 +67,91 @@ const AddonsBar = () => {
         >
           Things you can configure
         </Span>
+        <Div pt="1rem" width="100%" borderBottom="1px solid #A8A8A8">
+          <Div pb="0.5rem">
+            <H1
+              color="#B6B8BB"
+              fontWeight={700}
+              fontSize="0.875rem"
+              fontFamily="Satoshi"
+              lineHeight="1.313rem"
+            >
+              Input Token
+            </H1>
+            <P
+              color="#64686E"
+              fontWeight={400}
+              fontSize="0.75rem"
+              fontFamily="Satoshi"
+              lineHeight="1.125rem"
+            >
+              Insert the type of the token that you want to sell
+            </P>
+          </Div>
+          <Input
+            p="1rem"
+            mb="1.5rem"
+            type="text"
+            width="100%"
+            color="#353A3E"
+            height="2.75rem"
+            background="#EDEDF1"
+            borderRadius="0.5rem"
+            border="1px solid #E0E0D7"
+            {...register('coinInType')}
+          />
+        </Div>
         <ToggleComponent
           defaultValue={false}
           hasBorderBottom={true}
-          label="Fixed input mint"
-          description="Input mint cannot be changed"
-          onChange={(value) => handleToggle('fixedInputMint', value)}
+          label="Fixed Input Coin"
+          description="Input coin cannot be changed"
+          onChange={(value) => setValue('fixedCoinIn', value)}
         />
+        <Div pt="1rem" width="100%" borderBottom="1px solid #A8A8A8">
+          <Div pb="0.5rem">
+            <H1
+              color="#B6B8BB"
+              fontWeight={700}
+              fontSize="0.875rem"
+              fontFamily="Satoshi"
+              lineHeight="1.313rem"
+            >
+              Output Token
+            </H1>
+            <P
+              color="#64686E"
+              fontWeight={400}
+              fontSize="0.75rem"
+              fontFamily="Satoshi"
+              lineHeight="1.125rem"
+            >
+              Insert the type of the token that you want to buy
+            </P>
+          </Div>
+          <Input
+            p="1rem"
+            mb="1.5rem"
+            type="text"
+            width="100%"
+            color="#353A3E"
+            height="2.75rem"
+            background="#EDEDF1"
+            borderRadius="0.5rem"
+            border="1px solid #E0E0D7"
+            {...register('coinOutType')}
+          />
+        </Div>
         <ToggleComponent
           defaultValue={false}
           hasBorderBottom={true}
-          label="Fixed output mint"
-          description="Output mint cannot be changed"
-          onChange={(value) => handleToggle('fixedOutputMint', value)}
+          label="Fixed Output Coin"
+          description="Output coin cannot be changed"
+          onChange={(value) => setValue('fixedCoinOut', value)}
         />
       </Div>
-      <Div width="100%" borderBottom="1px solid #A8A8A8" pb="1rem">
-        <Span
-          mt="1.5rem"
-          mb="0.5rem"
-          fontWeight={700}
-          fontSize="0.875rem"
-          fontFamily="Satoshi"
-          lineHeight="1.875rem"
-        >
-          Exact output mode
-        </Span>
-        <Dropdown
-          menuItems={templateValues}
-          defaultValue={exactOutputMode}
-          onSelect={(value) => handleDropdown('exactOutputMode', value)}
-        />
-      </Div>
-      <Div mb="1rem" width="100%">
-        <ToggleComponent
-          defaultValue={false}
-          hasBorderBottom={true}
-          label="Fixed amount"
-          onChange={(value) => handleToggle('fixedAmount', value)}
-          description="Depending on Exact In / Exact Out, the amount cannot be changed"
-        />
-        <ToggleComponent
-          defaultValue={false}
-          hasBorderBottom={true}
-          label="Use user slippage"
-          onChange={(value) => handleToggle('useUserSlippage', value)}
-          description="Prevent Initial slippage from overriding user's last saved slippage"
-        />
-      </Div>
-      <Div mb="0.5rem" width="100%" borderBottom="1px solid #A8A8A8">
+      <AddonAggregator />
+      <Div mb="0.5rem" width="100%">
         <Div pb="0.5rem">
           <H1
             color="#B6B8BB"
@@ -163,78 +185,7 @@ const AddonsBar = () => {
           background="#EDEDF1"
           borderRadius="0.5rem"
           border="1px solid #E0E0D7"
-          onChange={(event) =>
-            handleOnInputChange('inputUserSlippage', event.target.value)
-          }
-        />
-      </Div>
-      <Div width="100%" borderBottom="1px solid #A8A8A8">
-        <Div pb="0.5rem">
-          <H1
-            color="#B6B8BB"
-            fontWeight={700}
-            fontSize="0.875rem"
-            fontFamily="Satoshi"
-            lineHeight="1.313rem"
-          >
-            Initial amount
-          </H1>
-          <P
-            color="#64686E"
-            fontWeight={400}
-            fontSize="0.75rem"
-            fontFamily="Satoshi"
-            lineHeight="1.125rem"
-          >
-            Slippage to be prefilled on first load
-          </P>
-        </Div>
-        <Input
-          p="1rem"
-          mb="1.5rem"
-          type="text"
-          width="100%"
-          color="#353A3E"
-          height="2.75rem"
-          background="#EDEDF1"
-          borderRadius="0.5rem"
-          border="1px solid #E0E0D7"
-          onChange={(event) =>
-            handleOnInputChange('initialAmount', event.target.value)
-          }
-        />
-      </Div>
-      <Div width="100%">
-        <ToggleComponent
-          defaultValue={false}
-          hasBorderBottom={true}
-          label="Strict Token List"
-          onChange={(value) => handleToggle('strictTokenList', value)}
-          description="The strict list contains a smaller set of validated tokens. To see all tokens, toggle 'off'."
-        />
-        <ToggleComponent
-          defaultValue={false}
-          hasBorderBottom={true}
-          label="Simulate wallet"
-          onChange={(value) => handleToggle('simulateWallet', value)}
-          description="Simulate Terminal with a fake wallet passthrough (Testing available on Desktop only)"
-        />
-      </Div>
-      <Div width="100%" pb="1rem">
-        <Span
-          mt="1.5rem"
-          mb="0.5rem"
-          fontWeight={700}
-          fontSize="0.875rem"
-          fontFamily="Satoshi"
-          lineHeight="1.875rem"
-        >
-          Preferred Explorer
-        </Span>
-        <Dropdown
-          menuItems={templateValues}
-          defaultValue={preferredExplorer}
-          onSelect={(value) => handleDropdown('preferredExplorer', value)}
+          {...register('slippage')}
         />
       </Div>
     </Div>

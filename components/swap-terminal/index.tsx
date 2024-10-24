@@ -1,10 +1,7 @@
 import dynamic from 'next/dist/shared/lib/dynamic';
+import { useFormContext, useWatch } from 'react-hook-form';
 
-import {
-  EMOJI_ADDRESS,
-  PROJECT_ADDRESS,
-  SUI_ADDRESS,
-} from '@/constants/swap-terminal';
+import { AddonsFormProps } from '@/views/components/terminal-section/addons/addons.types';
 
 const Terminal = dynamic(
   import('@interest-protocol/sui-coins-terminal').then(
@@ -14,11 +11,20 @@ const Terminal = dynamic(
 );
 
 const SwapTerminal = () => {
+  const { control } = useFormContext<AddonsFormProps>();
+
+  const { coinInType, coinOutType, fixedCoinIn, fixedCoinOut, projectAddress } =
+    useWatch({
+      control,
+    });
+
   return (
     <Terminal
-      typeIn={SUI_ADDRESS}
-      typeOut={EMOJI_ADDRESS}
-      projectAddress={PROJECT_ADDRESS}
+      typeIn={coinInType!}
+      fixedIn={fixedCoinIn}
+      typeOut={coinOutType!}
+      fixedOut={fixedCoinOut}
+      projectAddress={projectAddress!}
     />
   );
 };

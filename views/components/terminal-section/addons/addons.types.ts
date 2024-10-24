@@ -1,13 +1,13 @@
+import { Aggregator } from '@interest-protocol/sui-coins-terminal';
+
 export interface AddonsFormProps {
-  template: string;
-  fixedAmount: boolean;
-  initialAmount: string;
-  exactOutputMode: string;
-  fixedInputMint: boolean;
-  simulateWallet: boolean;
-  useUserSlippage: boolean;
-  fixedOutputMint: boolean;
-  strictTokenList: boolean;
-  inputUserSlippage: string;
-  preferredExplorer: string;
+  coinInType: string;
+  coinOutType: string;
+  fixedCoinIn: boolean;
+  slippage: `${number}`;
+  fixedCoinOut: boolean;
+  aggregator: Aggregator;
+  fixedAmountIn: boolean;
+  projectAddress: string;
+  fixedAmountOut: boolean;
 }

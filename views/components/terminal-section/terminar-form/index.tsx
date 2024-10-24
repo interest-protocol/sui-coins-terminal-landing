@@ -7,16 +7,16 @@ import { IntegratedTab, ModalTab, WidgetTab } from './tabs';
 
 const TerminalOption = [ModalTab, IntegratedTab, WidgetTab];
 
+const renderTabContent = (index: number) => {
+  const TabContent = TerminalOption[index];
+  return <TabContent />;
+};
+
 const TerminalForm = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1);
 
   const handleOnChangeTab = (index: number) => {
     setTabIndex(index);
-  };
-
-  const renderTabContent = () => {
-    const TabContent = TerminalOption[tabIndex];
-    return <TabContent />;
   };
 
   return (
@@ -63,7 +63,7 @@ const TerminalForm = () => {
         width="fill-available"
         justifyContent="center"
       >
-        {renderTabContent()}
+        {renderTabContent(tabIndex)}
       </Div>
     </Div>
   );

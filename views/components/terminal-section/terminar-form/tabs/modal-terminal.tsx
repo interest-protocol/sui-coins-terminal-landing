@@ -1,18 +1,28 @@
 import { Button, Div, Span } from '@stylin.js/elements';
+import { FormProvider, useFormContext } from 'react-hook-form';
 
 import SwapTerminal from '@/components/swap-terminal';
 import { useModal } from '@/hooks/use-modal';
 
+import { AddonsFormProps } from '../../addons/addons.types';
+
 const ModalTerminal = () => {
   const { setModal, handleClose } = useModal();
+  const form = useFormContext<AddonsFormProps>();
 
   const handleModal = () => {
-    setModal(<SwapTerminal />, {
-      isOpen: true,
-      custom: true,
-      onClose: handleClose,
-    });
+    setModal(
+      <FormProvider {...form}>
+        <SwapTerminal />
+      </FormProvider>,
+      {
+        isOpen: true,
+        custom: true,
+        onClose: handleClose,
+      }
+    );
   };
+
   return (
     <Div
       display="flex"
