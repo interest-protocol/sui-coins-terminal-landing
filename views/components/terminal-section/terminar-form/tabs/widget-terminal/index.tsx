@@ -198,7 +198,7 @@ const WidgetTerminal = () => {
           )}
         </Div>
         {isModalOpen && (
-          <Div bg="#171f28" height="40rem" display="flex" borderRadius="1rem">
+          <Div bg="#171f28" display="flex" borderRadius="1rem">
             <SwapTerminal />
           </Div>
         )}
