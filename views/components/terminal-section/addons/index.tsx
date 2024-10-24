@@ -23,7 +23,7 @@ const AddonsBar = () => {
       width={['100%', '100%', '100%', '20%', '20%']}
       minWidth={['100%', '100%', '100%', '20%', '20%']}
     >
-      <Div pt="1rem" width="100%" borderBottom="1px solid #A8A8A8">
+      <Div pt="1rem" width="100%">
         <Div pb="0.5rem">
           <H1
             color="#B6B8BB"
