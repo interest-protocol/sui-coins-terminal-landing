@@ -1,11 +1,11 @@
 export const TERMINAL_TYPE = [
   {
-    label: 'MODAL',
-    description: 'SuiCoin renders as a modal and takes up the whole screen.',
-  },
-  {
     label: 'INTEGRATED',
     description: 'SuiCoin renders as a part of your dApp.',
+  },
+  {
+    label: 'MODAL',
+    description: 'SuiCoin renders as a modal and takes up the whole screen.',
   },
   {
     label: 'WIDGET',

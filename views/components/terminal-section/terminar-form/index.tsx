@@ -5,7 +5,7 @@ import { Tabs } from '../../../../components/tabs';
 import { TERMINAL_TYPE } from '../terminal.data';
 import { IntegratedTab, ModalTab, WidgetTab } from './tabs';
 
-const TerminalOption = [ModalTab, IntegratedTab, WidgetTab];
+const TerminalOption = [IntegratedTab, ModalTab, WidgetTab];
 
 const renderTabContent = (index: number) => {
   const TabContent = TerminalOption[index];
