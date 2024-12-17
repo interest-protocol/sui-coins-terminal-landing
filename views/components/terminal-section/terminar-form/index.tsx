@@ -13,7 +13,7 @@ const renderTabContent = (index: number) => {
 };
 
 const TerminalForm = () => {
-  const [tabIndex, setTabIndex] = useState(1);
+  const [tabIndex, setTabIndex] = useState(0);
 
   const handleOnChangeTab = (index: number) => {
     setTabIndex(index);
