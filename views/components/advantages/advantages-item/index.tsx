@@ -53,6 +53,7 @@ const AdvantageItem: FC<AdvantageItemProps> = ({
           color="#B6B8BB"
           fontWeight="500"
           fontSize="1.125rem"
+          fontFamily="Satoshi"
           lineHeight="1.75rem"
           textAlign={['center', 'center', 'center', 'left', 'left']}
         >

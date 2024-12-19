@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Layout } from '@/components';
 
-import { HeroSection, TerminalSection } from '../components';
+import { AdvantageSection, HeroSection, TerminalSection } from '../components';
 import Partners from '../components/partners';
 
 const Home: FC = () => (
@@ -10,6 +10,7 @@ const Home: FC = () => (
     <HeroSection />
     <TerminalSection />
     <Partners />
+    <AdvantageSection />
   </Layout>
 );
 
