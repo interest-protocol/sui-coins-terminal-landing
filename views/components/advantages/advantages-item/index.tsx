@@ -20,10 +20,10 @@ const AdvantageItem: FC<AdvantageItemProps> = ({
 
   return (
     <Div
-      px="2rem"
       gap="4rem"
       display="flex"
       justifyContent="space-between"
+      px={['unset', 'unset', '2rem', '2rem', '2rem']}
       flexDirection={[
         'column',
         'column',

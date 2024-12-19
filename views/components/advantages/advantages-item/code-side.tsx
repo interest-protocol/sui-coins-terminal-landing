@@ -12,7 +12,7 @@ const AdvantageItemCodeSide: FC<AdvantageItemCodeSideProps> = ({ code }) => (
     height="30rem"
     borderRadius="1rem"
     width={['100%', '100%', '100%', '35rem', '35rem']}
-    minHeight={['100vh', '100vh', '100vh', 'unset', 'unset']}
+    minHeight={['auto', 'auto', 'auto', 'unset', 'unset']}
   >
     <Editor
       height="100%"
@@ -27,6 +27,7 @@ const AdvantageItemCodeSide: FC<AdvantageItemCodeSideProps> = ({ code }) => (
         automaticLayout: true,
         scrollbar: {
           vertical: 'hidden',
+          horizontal: 'visible',
         },
         minimap: {
           enabled: false,
