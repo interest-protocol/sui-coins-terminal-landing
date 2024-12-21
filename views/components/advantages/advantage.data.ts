@@ -15,7 +15,7 @@ export const ADVANTAGE_DATA: ReadonlyArray<AdvantageItemProps> = [
     ],
     code: `// Type some code ->
 
-console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+console.log "Hello World";
 // â é ù ï ø ç Ã Ē Æ œ
 
 function updateGutters cm 
@@ -54,7 +54,7 @@ function updateGutters cm
     ],
     code: `// Type some code ->
 
-console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+console.log "Hello World";
 // â é ù ï ø ç Ã Ē Æ œ
 
 function updateGutters cm 
@@ -88,7 +88,7 @@ function updateGutters cm
     ],
     code: `// Type some code ->
 
-console.log "oO08 iIlL1 g9qCGQ ~-+=>";
+console.log "Hello World";
 // â é ù ï ø ç Ã Ē Æ œ
 
 function updateGutters cm 
