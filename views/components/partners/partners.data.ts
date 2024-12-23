@@ -2,6 +2,11 @@ import { PartnersImage } from './partners.types';
 
 export const PARTNERS_IMAGES: ReadonlyArray<PartnersImage> = [
   {
+    image: './img/memez.webp',
+    label: 'MEMEZ',
+    url: '#',
+  },
+  {
     image: 'https://pbs.twimg.com/media/GXYmh-OXgAAq4lO.jpg',
     label: 'PUGWIF',
     url: 'https://pugwifsui.com/',
