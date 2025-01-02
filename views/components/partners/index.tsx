@@ -1,27 +1,35 @@
-import { Div } from '@stylin.js/elements';
+import { Box } from '@interest-protocol/ui-kit';
+import { Img } from '@stylin.js/elements';
+import Link from 'next/link';
 import { FC } from 'react';
 import { v4 } from 'uuid';
 
-import { PARTNERS_DATA } from './partners.data';
+import { PARTNERS_IMAGES } from './partners.data';
 
 const Partners: FC = () => (
-  <Div pt="6rem" display="flex">
-    <Div
-      display="flex"
-      alignItems="center"
-      mx="auto"
-      gap={['2.5rem', '2.5rem', '3rem']}
-      flexDirection={['column', 'row']}
-      flexWrap="wrap"
-      justifyContent="center"
-    >
-      {PARTNERS_DATA.map(({ size, Icon }) => (
-        <Div height="3rem" width={size} key={v4()}>
-          <Icon maxHeight="3rem" maxWidth={size} width="100%" />
-        </Div>
-      ))}
-    </Div>
-  </Div>
+  <Box
+    gap="2rem"
+    width="100%"
+    height="auto"
+    display="flex"
+    flexWrap="wrap"
+    alignItems="center"
+    justifyContent="center"
+    py={['m', 'm', 'm', '2xl']}
+    px={['m', 'm', 'm', '5rem']}
+  >
+    {PARTNERS_IMAGES.map((item) => (
+      <Link key={v4()} href={item.url} target="blank">
+        <Img
+          width="6rem"
+          src={item.image}
+          alt={item.label}
+          objectFit="cover"
+          borderRadius="1rem"
+        />
+      </Link>
+    ))}
+  </Box>
 );
 
 export default Partners;

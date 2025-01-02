@@ -1,7 +1,7 @@
 import dynamic from 'next/dist/shared/lib/dynamic';
 import { useFormContext, useWatch } from 'react-hook-form';
 
-import { AddonsFormProps } from '@/views/components/terminal-section/addons/addons.types';
+import { AddonsFormProps } from '@/views/components/terminal/addons/addons.types';
 
 const Terminal = dynamic(
   import('@interest-protocol/sui-coins-terminal').then(

@@ -1,22 +1,27 @@
 import { Button, Div, P } from '@stylin.js/elements';
 import { FC } from 'react';
+import { useFormContext } from 'react-hook-form';
 import { v4 } from 'uuid';
 
+import { OpenInNewSVG } from '@/components/svg';
 import { copyToClipboard } from '@/utils/clipboard';
 
-import { AdvantageItemProps } from './advantage-item.types';
-import AdvantageItemCodeSide from './code-side';
+import { AddonsFormProps } from '../../terminal/addons/addons.types';
+import { DocsItemProps } from '../docs.types';
+import DocsCodeSnippet from './docs-code-snippet';
 
-const AdvantageItem: FC<AdvantageItemProps> = ({
+const DocsItem: FC<DocsItemProps> = ({
   code,
   title,
   invert,
-  description,
   buttonList,
+  description,
+  ...props
 }) => {
-  const handleCopyToClipBoard = () => {
-    copyToClipboard(code);
-  };
+  const { getValues } = useFormContext<AddonsFormProps>();
+  const handleCopyToClipBoard = () => copyToClipboard(code(getValues()));
+  const goToUrl = (url: string) => () =>
+    window.open(url, '_blank', 'noreferrer');
 
   return (
     <Div
@@ -65,7 +70,7 @@ const AdvantageItem: FC<AdvantageItemProps> = ({
           justifyContent={['center', 'center', 'center', 'unset', 'unset']}
           flexWrap="wrap"
         >
-          {buttonList.map(({ title, onClick, Icon, isCopyToClipBoard }) => (
+          {buttonList.map(({ title, url, isCopyToClipBoard }) => (
             <Button
               key={v4()}
               px="1rem"
@@ -89,19 +94,29 @@ const AdvantageItem: FC<AdvantageItemProps> = ({
               gap="1rem"
               display="flex"
               alignItems="center"
-              onClick={!isCopyToClipBoard ? onClick : handleCopyToClipBoard}
+              onClick={
+                isCopyToClipBoard
+                  ? handleCopyToClipBoard
+                  : url
+                    ? goToUrl(url)
+                    : undefined
+              }
             >
               {title}
-              {Icon && (
-                <Icon maxHeight="1.25rem" maxWidth="1.25rem" width="1.25rem" />
+              {url && (
+                <OpenInNewSVG
+                  maxHeight="1.25rem"
+                  maxWidth="1.25rem"
+                  width="1.25rem"
+                />
               )}
             </Button>
           ))}
         </Div>
       </Div>
-      <AdvantageItemCodeSide code={code} />
+      <DocsCodeSnippet code={code} {...props} />
     </Div>
   );
 };
 
-export default AdvantageItem;
+export default DocsItem;

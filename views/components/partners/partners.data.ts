@@ -1,32 +1,45 @@
-import {
-  AftermathSVG,
-  MovementSVG,
-  MovewiffrensSVG,
-  RouteXSVG,
-  SataySVG,
-} from '@/components/svg';
+import { PartnersImage } from './partners.types';
 
-import { PartnerItemProps } from './partners.types';
-
-export const PARTNERS_DATA: ReadonlyArray<PartnerItemProps> = [
+export const PARTNERS_IMAGES: ReadonlyArray<PartnersImage> = [
   {
-    size: '13.4rem',
-    Icon: MovementSVG,
+    image: 'https://pbs.twimg.com/media/GXYmh-OXgAAq4lO.jpg',
+    label: 'PUGWIF',
+    url: 'https://pugwifsui.com/',
   },
   {
-    size: '5.25rem',
-    Icon: SataySVG,
+    image:
+      'https://pbs.twimg.com/profile_images/1838427603817873408/ChHYQNF6_400x400.jpg',
+    label: 'AXOL',
+    url: 'https://www.axolcoin.xyz/',
   },
   {
-    size: '8.6rem',
-    Icon: RouteXSVG,
+    image:
+      'https://pbs.twimg.com/profile_images/1856058233170862081/YGo0eoWf_400x400.jpg',
+    label: 'BUBL',
+    url: 'https://bublsui.com/',
   },
   {
-    size: '10rem',
-    Icon: AftermathSVG,
+    image:
+      'https://assets.coingecko.com/coins/images/33610/large/pug-head.png?1702513072',
+    label: 'FUD THE PUG',
+    url: 'https://fudthepug.com/',
   },
   {
-    size: '11rem',
-    Icon: MovewiffrensSVG,
+    image:
+      'https://pbs.twimg.com/profile_images/1793248537364377601/AUMtAIeV_400x400.jpg',
+    label: 'BLUB',
+    url: 'https://www.blubsui.com/',
+  },
+  {
+    image:
+      'https://pbs.twimg.com/profile_images/1845914654268080130/2QubeteC_400x400.jpg',
+    label: 'DAM',
+    url: 'https://suibeaver.xyz/',
+  },
+  {
+    image:
+      'https://pbs.twimg.com/profile_images/1834551994813460480/iu0u5XT1_400x400.jpg',
+    label: 'EMOJI SUI',
+    url: 'https://www.emojisui.xyz/',
   },
 ];

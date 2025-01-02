@@ -12,8 +12,8 @@ importers:
         specifier: ^11.11.1
         version: 11.13.3(@types/react@18.3.11)(react@18.3.1)
       '@interest-protocol/sui-coins-terminal':
-        specifier: ^0.3.0
-        version: 0.3.0(@emotion/is-prop-valid@1.3.1)(@mysten/sui.js@0.54.1(typescript@5.6.3))(@types/react-dom@18.3.0)(@types/react@18.3.11)(babel-plugin-macros@3.1.0)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
+        specifier: ^1.0.2
+        version: 1.0.2(@emotion/is-prop-valid@1.3.1)(@mysten/sui.js@0.54.1(typescript@5.6.3))(@types/react-dom@18.3.0)(@types/react@18.3.11)(babel-plugin-macros@3.1.0)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
       '@interest-protocol/ui-kit':
         specifier: 0.2.26-alpha
         version: 0.2.26-alpha(@types/react@18.3.11)
@@ -394,17 +394,14 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@interest-protocol/sui-coins-terminal@0.3.0':
-    resolution: {integrity: sha512-lq/16x1oyH+bBioreICJ040McmXkzMUwHAvjfN/gelyyxWFvjeX5JoASmJOEsBFfUJyEzqLZ84F7EBXrTaXikg==}
+  '@interest-protocol/sui-coins-terminal@1.0.2':
+    resolution: {integrity: sha512-P8e8LL3LXRg6kYQ1g8eUw8BNgaQhiCMHwVS1n9F5Ksort5a7UEjOUKqypACMBeZ7bn/COBcM5jkgSAjm9B+G9Q==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
 
-  '@interest-protocol/sui-tokens@2.3.0':
-    resolution: {integrity: sha512-npvThb6z+9g6QXcvIuOmpf+SjENP0tmEwasa65kj/lJTDmMgNDHR2ZbB9t/4ZzeWzv0MEJKAyb3IsheowyouZA==}
-
-  '@interest-protocol/tokens@1.3.0':
-    resolution: {integrity: sha512-zDh0eiZEe0ybhon9mgwvBt0p6FQ4sVFlg0W4Tj4joAA0HBr5FulbUxpkSbBvx6UN8RRTLrjbJFcuMBKTTloV7g==}
+  '@interest-protocol/sui-tokens@4.1.6':
+    resolution: {integrity: sha512-uPnnLgGZkSV50OyHoeNYzEdZyxK8Ik4TW9dNnX5sVRMyYk4i3fzuKR5+aZ0iZXx/HN7Eo15sY9k5J9actBUGNg==}
 
   '@interest-protocol/ui-kit@0.2.26-alpha':
     resolution: {integrity: sha512-7c/p17tXmC+hWM9ELD3ue+M+uqZzb1u9kpMyb3rC4r1uEO4O+vcW2E2xWktk84rus0RJODzX3JfuN8obL+FDdQ==}
@@ -556,9 +553,6 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
-
-  '@openzeppelin/contracts-upgradeable@4.9.6':
-    resolution: {integrity: sha512-m4iHazOsOCv1DgM7eD7GupTJ+NFVujRZt1wzddDPSVGpWdKq1SKkla5htKG7+IS4d2XOCtzkUNwRZ7Vq5aEUMA==}
 
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
@@ -3658,11 +3652,10 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@interest-protocol/sui-coins-terminal@0.3.0(@emotion/is-prop-valid@1.3.1)(@mysten/sui.js@0.54.1(typescript@5.6.3))(@types/react-dom@18.3.0)(@types/react@18.3.11)(babel-plugin-macros@3.1.0)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)':
+  '@interest-protocol/sui-coins-terminal@1.0.2(@emotion/is-prop-valid@1.3.1)(@mysten/sui.js@0.54.1(typescript@5.6.3))(@types/react-dom@18.3.0)(@types/react@18.3.11)(babel-plugin-macros@3.1.0)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)':
     dependencies:
       '@emotion/react': 11.13.3(@types/react@18.3.11)(react@18.3.1)
-      '@interest-protocol/sui-tokens': 2.3.0
-      '@interest-protocol/tokens': 1.3.0
+      '@interest-protocol/sui-tokens': 4.1.6
       '@interest-protocol/ui-kit': 0.3.1-beta(@types/react@18.3.11)
       '@mysten/dapp-kit': 0.14.27(@tanstack/react-query@5.59.15(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.3.11)(babel-plugin-macros@3.1.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3)
       '@mysten/sui': 1.13.0(typescript@5.6.3)
@@ -3704,11 +3697,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@interest-protocol/sui-tokens@2.3.0': {}
-
-  '@interest-protocol/tokens@1.3.0':
-    dependencies:
-      '@openzeppelin/contracts-upgradeable': 4.9.6
+  '@interest-protocol/sui-tokens@4.1.6': {}
 
   '@interest-protocol/ui-kit@0.2.26-alpha(@types/react@18.3.11)':
     dependencies:
@@ -3926,8 +3915,6 @@ snapshots:
       fastq: 1.17.1
 
   '@nolyfill/is-core-module@1.0.39': {}
-
-  '@openzeppelin/contracts-upgradeable@4.9.6': {}
 
   '@pkgr/core@0.1.1': {}
 

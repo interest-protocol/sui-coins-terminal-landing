@@ -6,21 +6,21 @@ export const SOCIAL: SocialProps[] = [
   {
     title: 'X',
     Icon: XSVG,
-    link: '',
+    link: 'https://x.com/suicoins',
   },
   {
     title: 'Discord',
     Icon: DiscordSVG,
-    link: '',
+    link: 'https://discord.com/invite/interestprotocol',
   },
   {
     title: 'Github',
     Icon: GithubSVG,
-    link: '',
+    link: 'https://github.com/interest-protocol/sui-coins-terminal',
   },
   {
     title: 'Telegram',
     Icon: Telegram,
-    link: '',
+    link: 'https://t.me/interestprotocol',
   },
 ];
