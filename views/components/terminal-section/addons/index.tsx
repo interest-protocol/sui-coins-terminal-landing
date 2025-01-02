@@ -3,7 +3,6 @@ import { useFormContext } from 'react-hook-form';
 
 import { ToggleComponent } from '@/components/toogle';
 
-import AddonAggregator from './addon-aggregator';
 import { AddonsFormProps } from './addons.types';
 
 const AddonsBar = () => {
@@ -150,7 +149,6 @@ const AddonsBar = () => {
           onChange={(value) => setValue('fixedCoinOut', value)}
         />
       </Div>
-      <AddonAggregator />
       <Div mb="0.5rem" width="100%">
         <Div pb="0.5rem">
           <H1

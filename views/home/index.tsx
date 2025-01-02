@@ -4,8 +4,12 @@ import { FormProvider, useForm } from 'react-hook-form';
 
 import { Layout } from '@/components';
 
-import { HeroSection, TerminalSection } from '../components';
-import Docs from '../components/docs';
+import {
+  DocsSection,
+  HeroSection,
+  PartnerSection,
+  TerminalSection,
+} from '../components';
 import { AddonsFormProps } from '../components/terminal-section/addons/addons.types';
 
 const Home: FC = () => {
@@ -28,7 +32,8 @@ const Home: FC = () => {
       <Layout>
         <HeroSection />
         <TerminalSection />
-        <Docs />
+        <PartnerSection />
+        <DocsSection />
       </Layout>
     </FormProvider>
   );
