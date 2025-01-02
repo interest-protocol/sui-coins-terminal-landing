@@ -1,4 +1,4 @@
-import { AddonsFormProps } from '../terminal-section/addons/addons.types';
+import { AddonsFormProps } from '../terminal/addons/addons.types';
 
 export enum DocsTech {
   Vanilla,

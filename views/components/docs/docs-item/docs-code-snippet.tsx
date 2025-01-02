@@ -5,7 +5,7 @@ import { useFormContext, useWatch } from 'react-hook-form';
 
 import { Tabs } from '@/components/tabs';
 
-import { AddonsFormProps } from '../../terminal-section/addons/addons.types';
+import { AddonsFormProps } from '../../terminal/addons/addons.types';
 import { DocsCodeSnippetProps } from '../docs.types';
 
 const DocsCodeSnippet: FC<DocsCodeSnippetProps> = ({

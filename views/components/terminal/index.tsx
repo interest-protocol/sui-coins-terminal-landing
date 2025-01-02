@@ -1,11 +1,12 @@
-import { Div } from '@stylin.js/elements';
+import { Section } from '@stylin.js/elements';
 import { FC } from 'react';
 
 import AddonsBar from './addons';
 import TerminalForm from './terminar-form';
 
 const TerminalSection: FC = () => (
-  <Div
+  <Section
+    id="terminal"
     p={['0.5rem', '0.5rem', '0.5rem', '1.5rem', '1.5rem']}
     gap="1rem"
     mt="-13rem"
@@ -24,7 +25,7 @@ const TerminalSection: FC = () => (
   >
     <AddonsBar />
     <TerminalForm />
-  </Div>
+  </Section>
 );
 
 export default TerminalSection;

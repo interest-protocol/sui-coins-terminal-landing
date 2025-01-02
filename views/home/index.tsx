@@ -7,10 +7,10 @@ import { Layout } from '@/components';
 import {
   DocsSection,
   HeroSection,
-  PartnerSection,
+  InformativeSection,
   TerminalSection,
 } from '../components';
-import { AddonsFormProps } from '../components/terminal-section/addons/addons.types';
+import { AddonsFormProps } from '../components/terminal/addons/addons.types';
 
 const Home: FC = () => {
   const form = useForm<AddonsFormProps>({
@@ -32,7 +32,7 @@ const Home: FC = () => {
       <Layout>
         <HeroSection />
         <TerminalSection />
-        <PartnerSection />
+        <InformativeSection />
         <DocsSection />
       </Layout>
     </FormProvider>

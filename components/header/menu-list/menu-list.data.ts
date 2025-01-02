@@ -1,14 +1,18 @@
 export const NAV_ITEMS = [
   {
     name: 'How it works',
-    url: '/',
+    id: '#terminal',
   },
   {
-    name: 'Repo',
-    url: '/',
+    name: 'Projects',
+    id: '#projects',
   },
   {
     name: 'Documentation',
-    url: '/',
+    id: '#docs',
+  },
+  {
+    name: 'Repo',
+    url: 'https://github.com/interest-protocol/sui-coins-terminal',
   },
 ];

@@ -6,7 +6,7 @@ import { v4 } from 'uuid';
 import { OpenInNewSVG } from '@/components/svg';
 import { copyToClipboard } from '@/utils/clipboard';
 
-import { AddonsFormProps } from '../../terminal-section/addons/addons.types';
+import { AddonsFormProps } from '../../terminal/addons/addons.types';
 import { DocsItemProps } from '../docs.types';
 import DocsCodeSnippet from './docs-code-snippet';
 
