@@ -17,7 +17,7 @@ const Docs: FC = () => {
   return (
     <Div
       id="docs"
-      my="6rem"
+      mb="6rem"
       gap="6rem"
       display="flex"
       flexDirection="column"
