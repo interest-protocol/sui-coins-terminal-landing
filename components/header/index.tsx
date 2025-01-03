@@ -36,6 +36,7 @@ const HeaderBar: FC = () => {
       minHeight={openMenu ? '100vh' : 'auto'}
     >
       <Div
+        flex="1"
         pb="1rem"
         gap="1rem"
         alignItems="center"
