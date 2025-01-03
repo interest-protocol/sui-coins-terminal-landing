@@ -19,7 +19,7 @@ const Hero: FC = () => (
           fontFamily="Satoshi"
           fontSize={['2rem', '2rem', '2rem', '3.75rem', '3.75rem']}
         >
-          SUICOIN Terminal
+          SuiCoins Terminal
         </H1>
       </Div>
       <Div color="#fff" maxWidth="48rem">
@@ -30,9 +30,10 @@ const Hero: FC = () => (
           lineHeight="1.875rem"
           fontSize={['0.875rem', '0.875rem', '0.875rem', '1rem', '1rem']}
         >
-          SUI Terminal is an open-source, lightweight version of Jupiter that
-          offers an end-to-end swap flow solution. Easily integrate it into your
-          HTML for seamless swaps across platforms.
+          SUI Terminal is an open-source, lightweight version of SuiCoins Swap
+          feature, designed to provide a seamless end-to-end swap flow solution.
+          It can be easily integrated into your Website, enabling smooth swaps
+          across platforms.
         </P>
       </Div>
     </Div>

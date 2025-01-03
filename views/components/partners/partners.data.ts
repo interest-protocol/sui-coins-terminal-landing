@@ -8,9 +8,9 @@ export const PARTNERS_IMAGES: ReadonlyArray<PartnersImage> = [
   },
   {
     image:
-      'https://pbs.twimg.com/profile_images/1838427603817873408/ChHYQNF6_400x400.jpg',
-    label: 'AXOL',
-    url: 'https://www.axolcoin.xyz/',
+      'https://pbs.twimg.com/profile_images/1849950373555077120/aO3j7mma_400x400.jpg',
+    label: 'Ronda',
+    url: 'https://rondaonsui.com/',
   },
   {
     image:
@@ -23,12 +23,6 @@ export const PARTNERS_IMAGES: ReadonlyArray<PartnersImage> = [
       'https://assets.coingecko.com/coins/images/33610/large/pug-head.png?1702513072',
     label: 'FUD THE PUG',
     url: 'https://fudthepug.com/',
-  },
-  {
-    image:
-      'https://pbs.twimg.com/profile_images/1793248537364377601/AUMtAIeV_400x400.jpg',
-    label: 'BLUB',
-    url: 'https://www.blubsui.com/',
   },
   {
     image:

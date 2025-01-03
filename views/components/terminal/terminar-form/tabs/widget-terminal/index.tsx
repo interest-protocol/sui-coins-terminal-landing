@@ -101,8 +101,8 @@ const WidgetTerminal = () => {
             px={['2rem', '2rem', '2rem', 'unset', 'unset']}
             fontSize={['0.75rem', '0.75rem', '0.75rem', '0.75rem', '0.75rem']}
           >
-            Click on the arrows to see how the Jupiter Widget will appear on
-            your web browser. Click on the logo to view the Jupiter Swap Modal.
+            Click on the arrows to see how the SuiCoins Widget will appear on
+            your web browser. Click on the logo to view the SuiCoins Swap Modal.
           </P>
         </Div>
         <Div
