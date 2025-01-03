@@ -104,7 +104,7 @@ const HeaderBar: FC = () => {
           flexDirection="column"
           display={['flex', 'flex', 'flex', 'none', 'none']}
         >
-          <MenuList />
+          <MenuList onClose={() => setOpenMenu(!openMenu)} />
         </Div>
       )}
     </Header>

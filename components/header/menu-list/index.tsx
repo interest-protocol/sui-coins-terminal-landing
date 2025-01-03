@@ -5,15 +5,17 @@ import { FC } from 'react';
 import { OpenInNewSVG } from '@/components/svg';
 
 import { NAV_ITEMS } from './menu-list.data';
+import { MenuListProps } from './menu-list.types';
 
-const MenuList: FC = () => (
+const MenuList: FC<MenuListProps> = ({ onClose }) => (
   <>
     {NAV_ITEMS.map(({ name, url, id }, index) => (
       <Link
         key={index}
         href={url || id!}
-        style={{ textDecoration: 'none', display: 'flex' }}
+        onClick={() => onClose?.()}
         target={url ? '_blank' : undefined}
+        style={{ textDecoration: 'none', display: 'flex' }}
       >
         <Li
           mx="auto"
