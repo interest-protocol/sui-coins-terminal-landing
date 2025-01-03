@@ -1,4 +1,5 @@
 import { Button, Div, H1, Header, Nav } from '@stylin.js/elements';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { MenuSVG, SuiCoinsLogoSVG, TimesSVG } from '../svg';
@@ -34,7 +35,13 @@ const HeaderBar = () => {
       pt={['2rem', '2rem', '2rem', '0', '0']}
     >
       <Div
+        flex="1"
         pb="1rem"
+        gap="1rem"
+        alignItems="center"
+        gridTemplateColumns="auto 1fr auto"
+        display={['inline-flex', 'inline-flex', 'inline-flex', 'grid']}
+        borderBottom={openMenu ? '1px solid #fff' : '1px solid #0e1218'}
         justifyContent={[
           'space-between',
           'space-between',
@@ -42,8 +49,6 @@ const HeaderBar = () => {
           'unset',
           'unset',
         ]}
-        borderBottom={openMenu ? '1px solid #fff' : '1px solid #0e1218'}
-        display={['inline-flex', 'inline-flex', 'inline-flex', 'grid', 'grid']}
       >
         <Div gridRowStart="1" justifySelf="left" gridColumnStart="1">
           <Div color="#fff" display="flex" flex="0 0 auto" alignItems="center">
@@ -55,11 +60,23 @@ const HeaderBar = () => {
             </H1>
           </Div>
         </Div>
-        <Nav gridRowStart="1" gridColumnStart="1" justifySelf="center">
-          <Div display={['none', 'none', 'none', 'flex', 'flex']}>
-            <MenuList />
-          </Div>
+        <Nav display={['none', 'none', 'none', 'flex']} justifyContent="center">
+          <MenuList />
         </Nav>
+        <Div display={['none', 'none', 'none', 'block']}>
+          <Link href="https://t.me/SatoshiMedici" target="_blank">
+            <Button
+              all="unset"
+              p="1rem"
+              bg="#0053DB"
+              color="#ffffff"
+              fontFamily="Proto"
+              borderRadius="2rem"
+            >
+              Get In touch
+            </Button>
+          </Link>
+        </Div>
         <Button
           bg="unset"
           border="none"
