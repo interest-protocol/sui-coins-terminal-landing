@@ -52,9 +52,7 @@ const HeaderBar = () => {
       >
         <Div gridRowStart="1" justifySelf="left" gridColumnStart="1">
           <Div color="#fff" display="flex" flex="0 0 auto" alignItems="center">
-            <Div maxHeight="1.5rem" maxWidth="1.5rem" mr="1rem">
-              <SuiCoinsLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
-            </Div>
+            <SuiCoinsLogoSVG maxHeight="2rem" maxWidth="3rem" width="100%" />
             <H1 fontSize="1rem" fontFamily="Satoshi">
               Sui Coins
             </H1>
