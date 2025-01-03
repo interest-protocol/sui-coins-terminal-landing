@@ -32,8 +32,8 @@ const Home: FC = () => {
       <Layout>
         <HeroSection />
         <TerminalSection />
-        <InformativeSection />
         <DocsSection />
+        <InformativeSection />
       </Layout>
     </FormProvider>
   );

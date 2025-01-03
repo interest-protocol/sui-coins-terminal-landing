@@ -30,10 +30,10 @@ const Hero: FC = () => (
           lineHeight="1.875rem"
           fontSize={['0.875rem', '0.875rem', '0.875rem', '1rem', '1rem']}
         >
-          SUI Terminal is an open-source, lightweight version of SuiCoins Swap
-          feature, designed to provide a seamless end-to-end swap flow solution.
-          It can be easily integrated into your Website, enabling smooth swaps
-          across platforms.
+          SuiCoins Terminal is an open-source, lightweight version of SuiCoins
+          Swap feature, designed to provide a seamless end-to-end swap flow
+          solution. It can be easily integrated into your Website, enabling
+          smooth swaps across platforms.
         </P>
       </Div>
     </Div>

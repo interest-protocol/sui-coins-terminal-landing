@@ -1,11 +1,11 @@
 import { Button, Div, H1, Header, Nav } from '@stylin.js/elements';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { MenuSVG, SuiCoinsLogoSVG, TimesSVG } from '../svg';
 import MenuList from './menu-list';
 
-const HeaderBar = () => {
+const HeaderBar: FC = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
@@ -23,16 +23,17 @@ const HeaderBar = () => {
 
   return (
     <Header
+      inset="0"
       pb="2rem"
       bg="#0E1218"
       width="100%"
       display="inline-flex"
       flexDirection="column"
       px={openMenu ? '1rem' : 'unset'}
+      py={openMenu ? '1.5rem' : 'none'}
       zIndex={openMenu ? 99 : 'inherit'}
-      minHeight={openMenu ? '100vh' : 'auto'}
       position={openMenu ? 'fixed' : 'unset'}
-      pt={['2rem', '2rem', '2rem', '0', '0']}
+      minHeight={openMenu ? '100vh' : 'auto'}
     >
       <Div
         flex="1"
@@ -50,17 +51,23 @@ const HeaderBar = () => {
           'unset',
         ]}
       >
-        <Div gridRowStart="1" justifySelf="left" gridColumnStart="1">
-          <Div color="#fff" display="flex" flex="0 0 auto" alignItems="center">
-            <Div maxHeight="1.5rem" maxWidth="1.5rem" mr="1rem">
-              <SuiCoinsLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
-            </Div>
-            <H1 fontSize="1rem" fontFamily="Satoshi">
-              Sui Coins
-            </H1>
-          </Div>
+        <Div display="flex" gap="1rem" alignItems="center">
+          <SuiCoinsLogoSVG maxHeight="2rem" maxWidth="3rem" width="100%" />
+          <H1
+            color="#ffffff"
+            fontSize="1rem"
+            whiteSpace="nowrap"
+            fontFamily="Satoshi"
+            textTransform="uppercase"
+          >
+            Sui Coins
+          </H1>
         </Div>
-        <Nav display={['none', 'none', 'none', 'flex']} justifyContent="center">
+        <Nav
+          gap="1rem"
+          display={['none', 'none', 'none', 'flex']}
+          justifyContent="center"
+        >
           <MenuList />
         </Nav>
         <Div display={['none', 'none', 'none', 'block']}>
@@ -98,7 +105,7 @@ const HeaderBar = () => {
           flexDirection="column"
           display={['flex', 'flex', 'flex', 'none', 'none']}
         >
-          <MenuList />
+          <MenuList onClose={() => setOpenMenu(!openMenu)} />
         </Div>
       )}
     </Header>

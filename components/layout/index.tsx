@@ -10,13 +10,13 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
   <ModalProvider>
     <Main
       mx="auto"
+      py="1.5rem"
       maxWidth="1280px"
       position="relative"
-      py={['0', '0', '0', '3.5rem', '3.5rem']}
       px={['1.5rem', '1.5rem', '1.5rem', '0']}
     >
       <Header />
-      <Div display="flex" alignItems="center" flexDirection="column">
+      <Div display="flex" alignItems="center" flexDirection="column" gap="5rem">
         {children}
       </Div>
       <Footer />

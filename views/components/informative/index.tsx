@@ -6,7 +6,7 @@ import Partners from '../partners';
 const Informative: FC = () => (
   <Section
     p="2rem"
-    my="6rem"
+    mb="6rem"
     gap="1rem"
     bg="#171F28"
     id="projects"
