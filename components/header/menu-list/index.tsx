@@ -20,6 +20,7 @@ const MenuList: FC<MenuListProps> = ({ onClose }) => (
         <Li
           mx="auto"
           color="#fff"
+          width="100%"
           gap="0.25rem"
           display="flex"
           fontSize="1rem"
