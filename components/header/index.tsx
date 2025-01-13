@@ -36,11 +36,11 @@ const HeaderBar: FC = () => {
       minHeight={openMenu ? '100vh' : 'auto'}
     >
       <Div
-        flex="1"
         pb="1rem"
         gap="1rem"
         alignItems="center"
         gridTemplateColumns="auto 1fr auto"
+        px={['unset', 'unset', 'unset', '1rem']}
         display={['inline-flex', 'inline-flex', 'inline-flex', 'grid']}
         borderBottom={openMenu ? '1px solid #fff' : '1px solid #0e1218'}
         justifyContent={[
